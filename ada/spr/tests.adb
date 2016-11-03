@@ -1,5 +1,5 @@
-with ada.text_io, ada.integer_text_io;
-use ada.text_io, ada.integer_text_io;
+with ada.text_io, ada.integer_text_io, pa;
+use ada.text_io, ada.integer_text_io, pa;
 
 procedure tests is
 	c: constant integer := 10;
@@ -23,4 +23,10 @@ begin
 	for i of arr loop
 		put_line(i'img);
 	end loop;
+	begin
+		countdown(4);
+		countdown(-4);
+	exception
+		when numeric_error => put_line("more than zero please!");
+	end;
 end tests;
