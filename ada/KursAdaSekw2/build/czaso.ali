@@ -1,0 +1,64 @@
+V "GNAT Lib v2015"
+M P W=b
+P ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV SPARK_05
+
+U czaso%b		czaso.adb		aac40e4f NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
+
+D ada.ads		20150506105328 3ffc8e18 ada%s
+D a-calend.ads		20150506105330 d986d312 ada.calendar%s
+D a-except.ads		20150506105328 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150506105326 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150506105328 119b8fb3 ada.streams%s
+D a-tags.ads		20150506105332 dc4d0634 ada.tags%s
+D a-textio.ads		20150506105332 386df5d4 ada.text_io%s
+D a-unccon.ads		20150506105330 f9eb8f06 ada.unchecked_conversion%s
+D czaso.adb		20161011083706 4b2f2889 czaso%b
+D interfac.ads		20150506105326 6033a23f interfaces%s
+D i-cstrea.ads		20150506105326 e53d8b8e interfaces.c_streams%s
+D system.ads		20150506105330 100301f7 system%s
+D s-conca3.ads		20150506105332 0b705ca5 system.concat_3%s
+D s-crtl.ads		20150506105326 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150506105330 54135002 system.exception_table%s
+D s-ficobl.ads		20150506105332 078245e4 system.file_control_block%s
+D s-imglld.ads		20150506105332 f3220969 system.img_lld%s
+D s-parame.ads		20150506105330 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150506105328 aa763b52 system.soft_links%s
+D s-stache.ads		20150506105332 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150506105330 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150506105332 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150506105326 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150506105330 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150506105330 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 9|3r6 3r19 4r5 4r18
+X 2 a-calend.ads
+36K13*Calendar 382e17 9|3w23 4r22
+38I9*Time<200I9> 9|7r11
+52V13*Clock{38I9} 9|12s9 19s9
+97V14*"-"{duration} 9|20s11
+200I9 Time_Rep<long_long_integer>
+X 7 a-textio.ads
+49K13*Text_IO 471e16 9|3w10 4r9
+263U14*Put_Line 9|21s3
+X 9 czaso.adb
+6U11*Czaso 6b11 22l5 22t10
+7i3 T1{2|38I9} 12m3 20r13
+7i7 T2{2|38I9} 19m3 20r8
+8o3 D{duration} 20m3 21r33
+9b3 Bu{boolean} 17m5 17r15
+10i3 Su{integer} 16m5 16r15 16r38
+14i7 I{integer}
+

@@ -1,0 +1,14 @@
+function fLUT(obraz,przekodowanie)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+
+OBRAZ = intlut(obraz,przekodowanie);
+subplot(2,2,1:2); plot(przekodowanie); title('Przekodowanie'); xlim([0 256]); ylim([0 256]);
+subplot(2,2,3); imshow(obraz); title('Oryginal');
+subplot(2,2,4); imshow(OBRAZ); title('Przeksztalcony');
+
+
+
+
+end
+
