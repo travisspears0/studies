@@ -1,0 +1,10 @@
+*select distinct
+	zwraca tylko rozne wyniki
+*case [expression] when [condition] then [result]
+*ziory
+	*union		(+)
+	*intersect	(*)
+	*except		(-)
+*
+*
+*
