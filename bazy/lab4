@@ -1,0 +1,73 @@
+*klucz obcy, klucz glowny
+*zlaczenia
+	select ... from tab1, tab2 where tab1.colx=tab2colx
+	select ... from t1 join t2 using(col)
+	select ... from t1 join on t1.colx=t2.colx
+	natural join
+		zlaczenie na kolumnach o tych samych nazwach
+*aliasy, samozlaczenia
+*left/right outer join
+	z lewej/prawej tabeli zwraca wszystkie wiersze, jezeli w pozostalej tabeli nie ma odpowiadajacych wynikow to sa tam nulle
+-------------------------------------------------------------------
+
+4.1.1
+SELECT k.nazwa, z.idzamowienia FROM klienci k, zamowienia z;
+4.1.2
+?
+
+4.2.1
+select klienci.nazwa, zamowienia.idzamowienia, zamowienia.datarealizacji from klienci natural join zamowienia where klienci.nazwa like '%Antoni';
+4.2.2
+select klienci.nazwa, klienci.ulica, zamowienia.idzamowienia, zamowienia.datarealizacji from klienci natural join zamowienia where klienci.ulica like '%/%';
+4.3.2
+select klienci.nazwa, klienci.ulica, zamowienia.idzamowienia, zamowienia.datarealizacji from klienci natural join zamowienia where klienci.miejscowosc='Kraków' and zamowienia.datarealizacji between '20131101' and '20131130';
+
+4.3.1
+select klienci.nazwa, klienci.ulica, zamowienia.idzamowienia, zamowienia.datarealizacji from klienci natural join zamowienia where zamowienia.datarealizacji >= now() - interval '5 years';
+4.3.2
+select klienci.nazwa, pudelka.nazwa from zamowienia natural join artykuly join pudelka using(idpudelka) join klienci using(idklienta) where idpudelka='fudg' or idpudelka='autu' ;
+4.3.3
+select distinct klienci.nazwa from zamowienia join klienci using(idklienta) order by klienci.nazwa asc;
+4.3.4
+4.3.5
+select distinct klienci.nazwa from zamowienia join klienci using(idklienta) where zamowienia.datarealizacji between '20131101' and '20131130';
+4.3.6
+select * from artykuly natural join zamowienia natural join klienci where artykuly.sztuk>=2 and (idpudelka='autu' or idpudelka='fudg');
+select distinct klienci.nazwa from artykuly natural join zamowienia natural join klienci where artykuly.sztuk>=2 and (idpudelka='autu' or idpudelka='fudg');
+4.3.7
+
+4.4.1
+select * from pudelka;
+4.4.2
+select * from pudelka where idpudelka='heav';
+4.4.3
+select * from pudelka where nazwa like '%Kolekcja%';
+
+4.5.1
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where idczekoladki='d09';
+4.5.2
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where czekoladki.nazwa like 'S%';
+4.5.3
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) where zawartosc.sztuk>=4;
+4.5.4
+select pudelka.nazwa as nazwa_pudelka,czekoladki.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where czekoladki.nadzienie='truskawki';
+4.5.5
+select pudelka.nazwa as nazwa_pudelka,czekoladki.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where czekoladki.czekolada!='gorzka';
+4.5.6
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where zawartosc.sztuk>=3 and czekoladki.nazwa='Gorzka truskawkowa';
+4.5.7
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where czekoladki.orzechy is null;
+4.5.8
+select pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where czekoladki.nazwa='Gorzka truskawkowa';
+4.5.9
+select distinct pudelka.nazwa from pudelka join zawartosc using(idpudelka) join czekoladki using(idczekoladki) where zawartosc.sztuk>=3 and czekoladki.nadzienie is null;
+
+4.6.1
+select cc.koszt,cc.nazwa from czekoladki c join czekoladki cc on c.koszt<cc.koszt where c.idczekoladki='d08';
+4.6.2
+select distinct k2.nazwa from klienci k1 natural join zamowienia z1 natural join artykuly a1, klienci k2 natural join zamowienia z2 natural join artykuly a2 where a1.idpudelka=a2.idpudelka and k1.nazwa='Górka Alicja';
+4.6.3
+select distinct k2.nazwa from klienci k1 natural join zamowienia z1 natural join artykuly a1, klienci k2 natural join zamowienia z2 natural join artykuly a2 where a1.idpudelka=a2.idpudelka and k1.miejscowosc='Katowice';
+
+
+
