@@ -1,6 +1,0 @@
-%clear
-clearvars;
-close all;
-clc;
-
-ph = imread('archiwum/phobos.bmp');
