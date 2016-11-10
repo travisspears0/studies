@@ -1,7 +1,8 @@
 with ada.text_io, ada.calendar;
 use ada.text_io, ada.calendar;
 
-procedure tasking2 is
+procedure zegar is
+	d: duration;
 	task  t is
 		entry zeruj;
 		entry zegar;
@@ -10,7 +11,6 @@ procedure tasking2 is
 	
 	task body t is
 		t: time;
-		d: duration;
 	begin
 		loop
 			select
@@ -21,15 +21,17 @@ procedure tasking2 is
 			or
 				accept zegar do
 					d := clock - t;
-					put_line(d'img);--return d?
+					put_line(d'img);
 				end zegar;
 			or
-				accept halt;
-					exit;
+				accept halt do
+					put_line("halt");
+					return;
+				end halt;
+				exit;
 			end select;
 		end loop;
 	end t;
-	d:duration;
 begin
 	t.zeruj;
 	for i in 1..10 loop
@@ -40,4 +42,5 @@ begin
 		t.zegar;
 	end loop;
 	t.halt;
-end tasking2;
+	put_line("result: " & d'img);
+end zegar;
