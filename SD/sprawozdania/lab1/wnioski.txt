@@ -1,0 +1,15 @@
+W danym modelu symulujemy obwod RC. Mamy nastepujące parametry:
+R	opór
+WPC	warunek początkowy(napięcie początkowe)
+C	pojemność
+K	stała
+
+Symulację można zapisać równaniem różniczkowym
+x'(t)=Ax(t)+Bu(t), gdzie
+	A = K
+	u(t) = 0
+czyli
+x(t) = e^(-t/RC)*x(0)
+
+Zwiększanie lub zmniejszanie C i R wpływa tak samo na wynik symulacji. Im większa wartość któregoś z tych parametrów tym napięcie spada wolniej, natomiast jeśli wartość ich jest mniejsza, spada szybciej. W punkcie WPC wykres zaczyna się.
+
