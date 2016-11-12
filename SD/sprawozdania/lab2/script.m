@@ -47,7 +47,7 @@ for i=-n:s:n%petla od -n do n, skok o s
         WPC=WPC*i;  %mnozymy wartosci poczatkowe przez zmienna iteracyjna,
                     %by okregi na wykresie nie nachodzily na siebie
     end;
-    sim('model');%symulacja
+    sim('lab2_model');%symulacja
     plot(simout(:,1),simout(:,2));%rysowanie wykresu
 end
 hold off;%zwolnienie blokady

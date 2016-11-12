@@ -15,7 +15,7 @@ for i = 1:n
     R=30/i;
     K=-1/(R*C);
     %przeprowadzenie symulacji i narysowanie wykresu
-    sim('model');
+    sim('lab1_model');
     subplot(1,n,i), plot(tout,x);
     %ustawienia wykresu
     hold on;
