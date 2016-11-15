@@ -36,8 +36,8 @@ for i=1:len    %dla kazdego A
     figure(i);
     plot(ks,wyniki);
     grid on;
-    xlabel('x');
-    ylabel('y');
+    xlabel('k');
+    ylabel('x(k)');
     title(sprintf('wartosci x(k) dla kE[1,10], A=%d, x(0)=%d',a,x0));
 end
 

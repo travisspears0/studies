@@ -18,6 +18,10 @@ plot(simout);
 %tytul wykresu
 title('system 1.4 a macierzami A B C');
 
+%parametry wykresu
+grid on;
+xlabel('t');
+ylabel('x(t)');
 
 %wartosc h
 h=.5;
@@ -39,8 +43,7 @@ title('system 1.4 a macierzami A+ B+ C+');
 
 %parametry wykresu
 grid on;
-xlabel('x');
-ylabel('y');
-axis([-10 10 -10 10]);
+xlabel('t');
+ylabel('x(t)');
 
 
