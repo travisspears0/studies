@@ -23,27 +23,30 @@ grid on;
 xlabel('t');
 ylabel('x(t)');
 
-%wartosc h
-h=.5;
-%wyliczanie macierzy A+,B+,C+ ze wzorow
-Ap = exp(A*h);
-Bp = exp(A*h)*B-B;%calka od 0 do h
-%nowe wartosci macierzy dla symulacji
-A=Ap;
-B=Bp;
-%symulacja
-sim('lab3_model');
+n=5;
+for i=1:n
+    %wartosc h
+    h=.3+.1*i;
+    %wyliczanie macierzy A+,B+,C+ ze wzorow
+    AP = exp(A*h);
+    x=sym('x');
+    BP = double( int(expm(x*A)*B,x,0,h));%calka od 0 do h
+    %nowe wartosci macierzy dla symulacji
+    A=AP;
+    B=BP;
+    %symulacja
+    sim('lab3_model');
 
-%rysowanie wykresu
-figure(2);
-plot(simout);
+    %rysowanie wykresu
+    figure;
+    plot(simout);
 
-%tytul wykresu
-title('system 1.4 a macierzami A+ B+ C+');
+    %tytul wykresu
+    title(sprintf('system 1.4 a macierzami A+ B+ C+ dla h=%d',h));
 
-%parametry wykresu
-grid on;
-xlabel('t');
-ylabel('x(t)');
-
+    %parametry wykresu
+    grid on;
+    xlabel('t');
+    ylabel('x(t)');
+end
 

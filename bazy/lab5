@@ -1,0 +1,80 @@
+select a,b,count(*),sum(c*d)
+from
+where
+group by a,b
+having
+
+w select musza byc kolumny wystepujace w group by
+having operuje na grupach(np haveing count(*)>1)
+count(col) - zlicza ilosc wierzy, gdzie col!=null
+
+limit
+
+---------------------------------------------------------------
+
+
+5.1.1
+select count(*) from czekoladki
+5.1.2
+select count(*) from czekoladki where nadzienie is not null;
+select count(nadzienie) from czekoladki;
+5.1.3
+select sum(sztuk) as s from zawartosc group by idpudelka order by s desc limit 1;
+5.1.4
+select idpudelka, sum(sztuk) as s from zawartosc group by idpudelka;
+5.1.5
+select z.idpudelka, sum(z.sztuk) as s from zawartosc z natural join czekoladki c where c.orzechy is null group by z.idpudelka;
+5.1.6
+select z.idpudelka, sum(z.sztuk) as s from zawartosc z natural join czekoladki c where c.czekolada='mleczna' group by z.idpudelka;
+
+5.2.1
+select za.idpudelka, sum(cz.masa) as masa from zawartosc za natural join czekoladki cz group by za.idpudelka;
+5.2.2
+select za.idpudelka, sum(cz.masa) as masa from zawartosc za natural join czekoladki cz group by za.idpudelka order by masa desc limit 1;
+5.2.3
+select avg(suma) from (select sum(cz.masa) as suma from zawartosc za natural join czekoladki cz group by za.idpudelka) as sumy;
+5.2.4
+select za.idpudelka, avg(cz.masa) from zawartosc za natural join czekoladki cz group by za.idpudelka;
+
+5.3.1
+select datarealizacji,count(*) from zamowienia group by datarealizacji order by datarealizacji asc;
+5.3.2
+select count(*) from zamowienia;
+5.3.3
+select sum(pu.cena) from zamowienia za natural join artykuly art natural join pudelka pu;
+5.3.4
+select k.nazwa,count(*) as ilosc_zamowien,sum(pu.cena) as laczna_wartosc from klienci k natural join zamowienia za natural join artykuly art join pudelka pu on art.idpudelka=pu.idpudelka group by k.idklienta ;
+
+5.4.1
+select za.idczekoladki,count(*) as ilosc from zawartosc za natural join czekoladki cz group by(za.idczekoladki) order by ilosc desc limit 1;
+5.4.2
+select pu.nazwa,sum(za.sztuk) as sztuk from pudelka pu natural join zawartosc za join czekoladki cz on cz.idczekoladki=za.idczekoladki where cz.orzechy is null group by pu.nazwa order by sztuk desc;
+5.4.3
+select cz.idczekoladki,cz.nazwa from zawartosc natural join czekoladki cz group by cz.idczekoladki order by count(*) desc limit 1;
+5.4.4
+select pu.idpudelka,pu.nazwa,count(*) from artykuly natural join pudelka pu group by pu.idpudelka order by count(*) desc limit 1;
+
+5.5.1
+	?
+5.5.2
+select count(*) from zamowienia group by to_char(datarealizacji,'YYYY-MM');
+5.5.3
+	?
+5.5.4
+select kl.miejscowosc,count(*) as cnt from zamowienia natural join klienci kl group by kl.miejscowosc order by cnt desc;
+
+
+5.6.1
+select sum(ma) from (select (sum(za.sztuk)*cz.masa) as ma from zawartosc za natural join czekoladki cz group by cz.idczekoladki) as masa;
+5.6.2
+select sum(ko) from (select (sum(za.sztuk)*cz.koszt) as ko from zawartosc za natural join czekoladki cz group by cz.idczekoladki) as koszt;
+
+5.7.1
+
+5.7.2
+
+5.7.3
+
+
+5.8
+
