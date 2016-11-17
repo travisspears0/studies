@@ -2,11 +2,10 @@ with ada.text_io, ada.integer_text_io;
 use ada.text_io, ada.integer_text_io;
 
 procedure tests is
-	i:integer := 0;
 	task ta is
 		entry start;
 		entry stop;
-		entry count;
+		entry count(n:in out integer);
 	end ta;
 	
 	task body ta is
@@ -17,9 +16,9 @@ procedure tests is
 					put_line("start");
 				end start;
 			or
-				accept count do
-					put_line("count..." & i'img);
-					i := i+1;
+				accept count(n:in out integer) do
+					n := n+1;
+					put_line("count..." & n'img);
 				end count;
 			or
 				accept stop;
@@ -27,12 +26,14 @@ procedure tests is
 			end select;
 		end loop;
 	end ta;
+	x:integer:=0;
 begin
 	ta.start;
 	for i in 1..10 loop
-		ta.count;
+		ta.count(x);
+		x:=x-1;
 		delay 0.1;
 	end loop;
 	ta.stop;
-	put_line("i=" & i'img);
+	put_line("x=" & x'img);
 end;

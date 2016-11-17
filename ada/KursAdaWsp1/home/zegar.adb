@@ -2,10 +2,10 @@ with ada.text_io, ada.calendar;
 use ada.text_io, ada.calendar;
 
 procedure zegar is
-	d: duration;
+	--d: duration;
 	task  t is
 		entry zeruj;
-		entry zegar;
+		entry zegar(d:out duration);
 		entry halt;
 	end t;
 	
@@ -19,7 +19,7 @@ procedure zegar is
 					t := clock;
 				end zeruj;
 			or
-				accept zegar do
+				accept zegar(d:out duration) do
 					d := clock - t;
 					put_line(d'img);
 				end zegar;
@@ -32,6 +32,7 @@ procedure zegar is
 			end select;
 		end loop;
 	end t;
+	du: duration;
 begin
 	t.zeruj;
 	for i in 1..10 loop
@@ -39,8 +40,8 @@ begin
 			t.zeruj;
 		end if;
 		delay 0.2;
-		t.zegar;
+		t.zegar(du);
 	end loop;
 	t.halt;
-	put_line("result: " & d'img);
+	put_line("result: " & du'img);
 end zegar;
