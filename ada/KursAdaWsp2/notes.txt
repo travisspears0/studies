@@ -1,0 +1,13 @@
+
+ada.synchronous_task_control;
+s:suspension_object;
+set_true(s);
+set_false(s);
+suspend_until_true(s);
+
+--obiekty lunb typy chronione
+protected x is
+--entry/procedure/variable etc...
+private
+--entry/procedure/variable etc...
+end x;
