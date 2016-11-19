@@ -13,6 +13,7 @@ macierze = [
     [-1 0;0 1];
     [0 1;-1 0];
     [-1 1;-1 -1];
+    [1 1;-1 1];
 ];
 
 %prosty UI
@@ -26,8 +27,11 @@ while i<length(macierze)
 end
 i=-1;
 while i<1 || i>len
-    i = input('Wybierz macierz');
+    i = input('Wybierz macierz: ');
 end
+disp('rysowanie wykresu dla macierzy:');
+disp(sprintf('|%d %d|',macierze(i,1),macierze(i,2)));
+disp(sprintf('|%d %d|',macierze(i+1,1),macierze(i+1,2)));
 %odczytanie wybranej macierzy jordana
 i=i*2-1;
 J = [macierze(i,1) macierze(i,2);macierze(i+1,1) macierze(i+1,2)];
@@ -43,7 +47,7 @@ n=10;%zakres petli
 s=.5;%skok
 for i=-n:s:n%petla od -n do n, skok o s
     WPC=[sin(i) ; cos(i)];%zmieniane z kazdym obiegiem petli wartosci poczatkowe
-    if(J(1,2)~=0 && J(2,1)~=0)%dla lambd zespolonych
+    if(J(1,2)~=0 && J(2,1)~=0 && J(1,1)==0 && J(2,2)==0)%dla okregow
         WPC=WPC*i;  %mnozymy wartosci poczatkowe przez zmienna iteracyjna,
                     %by okregi na wykresie nie nachodzily na siebie
     end;

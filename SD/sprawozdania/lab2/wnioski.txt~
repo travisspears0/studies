@@ -46,14 +46,8 @@ Portrety zależą od macierzy Jordana. W ćwiczeniu uwzględniłem następujące
     | 0  1|
     |-1  0|
     Lambda zespolona w postaci La=a+-bi(a=0,b=1). Z racji tego, że część rzeczywista=0
-    wykresem będą okręgi. Strzałki w kierunku ruchu wskazówek zegara.
+    
 9)
     |-1  1|
     |-1 -1|
-    Lambda zespolona jak w poprzednim, tylko, że tutaj a=-1. Ze wzgledu na to wykresem będzie spirala.
-    Strzałki skierowane do środka, więc system stabilny.
-10)
-    | 1  1|
-    |-1  1|
-    kontrast dla punktu 9), ponieważ tutaj strzałki idą na zewnątrz, układ jest niestabilny.
-
+    ...
