@@ -3,7 +3,7 @@ generic
 	type eltype is private;
 package buf is
 
-procedure push(x:eltype);
-procedure pop(x:out eltype);
+	procedure push(e: eltype; b: out boolean);
+	procedure pop(e:out eltype; b: out boolean);
 
 end buf;

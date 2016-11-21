@@ -4,14 +4,30 @@ use ada.text_io;
 package body buf is 
 
 	elements: array(1..size) of eltype;	
+	count: integer := 0;
 
-	procedure push(x: eltype) is
+	procedure push(e: eltype; b: out boolean) is
 	begin
-		put("");
+		elements(count+1) := e;
+		count := count+1;
+		put_line("pushed ");
+		b:=true;
+		exception
+			when constraint_error =>
+				put_line("[push]out of range");
+				b:=false;
 	end push;
 
-	procedure pop(x: out eltype) is
+	procedure pop(e: out eltype; b: out boolean) is
 	begin
-		put("");
+		e := elements(count);
+		count := count-1;
+		put_line("popped ");
+		b:=true;
+		exception
+			when constraint_error =>
+				put_line("[pop]out of range");
+				b := false;
 	end pop;
+
 end buf;
