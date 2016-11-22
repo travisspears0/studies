@@ -3,31 +3,41 @@ use ada.text_io;
 
 package body buf is 
 
-	elements: array(1..size) of eltype;	
-	count: integer := 0;
+	type eltypearr is array(integer range<>) of eltype;
 
-	procedure push(e: eltype; b: out boolean) is
+	protected buf is
+                entry wstaw(x: eltype);
+                entry wez(x: out eltype);
+		function getCount return integer;
+                private
+                        count:integer := 0;--info ile jest elementow
+                        elements: eltypearr(1..size);
+        end buf;
+        
+        protected body buf is
+                entry wstaw(x: eltype) when count<elements'length is begin
+                        put_line("    [buf]wstawianie " & count'img);
+                        count := count+1;
+                        elements(count) := x;
+                end wstaw;
+                entry wez(x: out eltype) when count>0 is begin
+                        put_line("    [buf]branie " & count'img);
+                        x := elements(count);
+                        count := count-1;
+                end wez;
+		function getCount return integer is (count);
+        end buf;
+
+	procedure push(e: eltype) is
 	begin
-		elements(count+1) := e;
-		count := count+1;
-		put_line("pushed ");
-		b:=true;
-		exception
-			when constraint_error =>
-				put_line("[push]out of range");
-				b:=false;
+		buf.wstaw(e);
 	end push;
 
-	procedure pop(e: out eltype; b: out boolean) is
+	procedure pop(e: out eltype) is
 	begin
-		e := elements(count);
-		count := count-1;
-		put_line("popped ");
-		b:=true;
-		exception
-			when constraint_error =>
-				put_line("[pop]out of range");
-				b := false;
+		buf.wez(e);
 	end pop;
+
+	function getCount return integer is (buf.getCount);
 
 end buf;

@@ -3,7 +3,8 @@ generic
 	type eltype is private;
 package buf is
 
-	procedure push(e: eltype; b: out boolean);
-	procedure pop(e:out eltype; b: out boolean);
+	function getCount return integer;
+	procedure push(e: eltype);
+	procedure pop(e:out eltype);
 
 end buf;

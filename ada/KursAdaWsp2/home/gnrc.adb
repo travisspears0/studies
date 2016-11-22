@@ -2,36 +2,43 @@ with ada.text_io, buf;
 use ada.text_io;
 
 procedure gnrc is
-	package pgi is new buf(5,integer);
-	package pgc is new buf(5,character);
 
-	x:integer;
-	
+	size: integer := 4;
+
+	package pgi is new buf(size,integer);
+	--package pgc is new buf(5,character);
+
 	task putter;
 	task popper;
 
+	puttergo: boolean := true;
+	poppergo: boolean := true;
+
 	task body putter is
-		i:integer := 1;
-		b:boolean;
-		begin
-			loop
-				pgi.push(i,b);
-				if(b=false) then  delay 0.5; end if;
-			end loop;
+	i:integer := 1;
+	begin
+		while(puttergo) loop
+			pgi.push(i);
+			delay 0.1;
+		end loop;
 	end putter;
 
 	task body popper is
 		i:integer;
-		b:boolean;
 	begin
-		loop
-			pgi.pop(i,b);
-			if(b=false) then delay 0.3; end if;
+		while(poppergo) loop
+			pgi.pop(i);
+			delay 0.2;
 		end loop;
 	end popper;
 	
 	
 
 begin
-	put("");
+	delay 1.0;
+	puttergo := false;
+	delay (0.2)*(pgi.getCount+1);	--tu dziala ok
+	--delay (0.2)*(pgi.getCount+2);	--w tym przypadku zawiesza sie w oczekiwaniu na pgi.pop
+	--czy da sie przerwac oczekiwanie w protected?
+	poppergo := false;
 end;
