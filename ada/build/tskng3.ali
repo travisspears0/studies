@@ -1,48 +1,41 @@
 V "GNAT Lib v4.9"
-M P W=b
+M P AB W=b
 P ZX
 
 RN
-RV SIMPLE_BARRIERS
+RV NO_ALLOCATORS
 RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_FIXED_POINT
 RV NO_IO
 RV NO_IMPLICIT_DYNAMIC_CODE
-RV NO_LOCAL_PROTECTED_OBJECTS
-RV NO_NESTED_FINALIZATION
-RV NO_PROTECTED_TYPES
+RV NO_LOCAL_ALLOCATORS
 RV NO_RELATIVE_DELAY
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_ALLOCATORS
 RV NO_TASK_HIERARCHY
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
-RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
-RV MAX_PROTECTED_ENTRIES=2
+RV MAX_SELECT_ALTERNATIVES=1
+RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1+
-RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U gnrc%b		gnrc.adb		6180f16b NE OO SU IL
+U tskng3%b		tskng3.adb		1244f2b9 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
-W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W buf%s			buf.adb			buf.ali
 W system%s		system.ads		system.ali
-W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
-W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
-W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
-W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18
@@ -56,21 +49,16 @@ D a-stream.ads		20140122164720 1a984740
 D a-tags.ads		20111212115430 6c0509d0
 D a-textio.ads		20140129155348 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
-D buf.ads		20161122074011 133149b1
-D buf.adb		20161122074324 41163626
-D gnrc.adb		20161122074440 4adc4d0e
 D interfac.ads		20140225151838 69adb1b9
 D i-c.ads		20110801143639 5421119b
 D i-cstrea.ads		20130412125801 8128536b
 D system.ads		20160213141829 90249111
 D s-atacco.ads		20120515093410 4c36d12f
-D s-conca2.ads		20140225151544 02a0d7d0
 D s-crtl.ads		20140225151544 840e6817
 D s-exctab.ads		20140225151139 54135002
 D s-ficobl.ads		20120709130952 55a71d43
 D s-finmas.ads		20140225151139 814daec4
 D s-finroo.ads		20120426095924 4ff27390
-D s-imgint.ads		20090409150019 02dbe0c2
 D s-linux.ads		20140409145429 5b2f79a5
 D s-multip.ads		20101011073009 38ac9f73
 D s-oscons.ads		20160213141902 a445b120
@@ -90,31 +78,29 @@ D s-taprop.ads		20111212143339 1dd2e1b6
 D s-taskin.ads		20140131154341 3f821f32
 D s-taprob.ads		20110927094500 502249e3
 D s-tpoben.ads		20121029113218 b641f948
-D s-tpobop.ads		20090409150019 5f548bb3
+D s-tasren.ads		20120208100446 a67a9949
 D s-tassta.ads		20121029110946 70812003
 D s-traent.ads		20140225151139 b5116092
 D s-unstyp.ads		20140225151139 510692af
 D s-wchcon.ads		20140225151139 1b7d22d2
+D tskng3.adb		20161124102459 2a29076d
 X 1 ada.ads
-16K9*Ada 19e8 14|1r6 2r5
+16K9*Ada 19e8 46|1r6 2r5
 X 10 a-textio.ads
-49K13*Text_IO 471e16 14|1w10 2r9
-X 12 buf.ads
-4k9*buf 10e8 14|1w19 8r28
-6V18 getCount{integer} 14|40s26[8]
-7U19 push 14|21s29[8]
-8U19 pop 14|30s29[8]
-X 14 gnrc.adb
-4U11*gnrc 4b11 44t4
-6i9 size{integer} 8r32
-8K17 pgi[12|4] 21r25 30r25 40r22
-11t14 putter 17b19 24l13 24t19
-12t14 popper 26b19 33l13 33t19
-14b9 puttergo{boolean} 20r23 39m9
-15b9 poppergo{boolean} 29r23 43m9
-18i9 i{integer} 21r34
-27i17 i{integer} 30m33
-X 35 s-stausa.ads
+49K13*Text_IO 471e16 46|1w10 2r9
+263U14*Put_Line 46|14s33 16s33 18s34 30s17 34s17 40s9 43s9 45s9 47s9
+X 30 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 46 tskng3.adb
+4U11*tskng3 4b11 48l5 48t11
+5T19 t 8l13 8e14 10b19 20l13 20t14 22r27 29r28 41r19
+6Y23 a 13b32 17l29 17t30 31s21 42s12
+7Y23 q 18b32 33s21 44s12
+22P14 pt(5T19) 23r13 27r22
+23p9 ot{22P14} 41m9 42r9 44r9
+25T19 u 26b19 35l13 35t14 37r27 46r19
+27p17 oot{22P14} 29m17 31r17 33r17
+37P14 pu(25T19) 38r13
+38p9 ou{37P14} 46m9
 

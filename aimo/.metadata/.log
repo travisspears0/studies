@@ -1,0 +1,12 @@
+!SESSION 2016-11-24 09:40:43.426 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.papyrus.infra.types.core 1 0 2016-11-24 09:42:40.942
+!MESSAGE org.eclipse.papyrus.gmfdiag.common.Diagram is already registred elementtype but it is not binded yet. It has been binded to Papyrus context. 
+
+!ENTRY org.eclipse.papyrus.infra.types.core 1 0 2016-11-24 09:42:41.062
+!MESSAGE org.eclipse.gmf.runtime.emf.type.core.default is already registred elementtype but it is not binded yet. It has been binded to Papyrus context. 
