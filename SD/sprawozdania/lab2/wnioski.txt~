@@ -50,24 +50,19 @@ Portrety zależą od macierzy Jordana. Przykładowe macierze i ich portrety:
     W liniach wykresu strzałki wybiegają na zewnątrz(bo exp(l2)>exp(l1)),
     co powoduje niestabilność systemu(do tej pory poprzednie systemy były stabilne).
 8)
-    |xa  xb|
-    |-xb xa|
-    xa=0
-    xb>=1
+    | 0  xb|
+    |-xb  0|
+    x>=1
     Lambda zespolona w postaci La=a+-bi(a=0,b=xb). Z racji tego, że część rzeczywista=0
     wykresem będą okręgi. Strzałki w kierunku ruchu wskazówek zegara. W tym przypadku należy
     zmieniać w pętli wartość początkową co iterację, by okręgi nie nachodziły na siebie.
 9)
-    |xa  xb|
-    |-xb xa|
-    xa<0
-    xb>=1
-    Lambda zespolona jak w poprzednim, tylko, że tutaj a=xa. Ze wzgledu na to wykresem będzie spirala.
+    |-1  1|
+    |-1 -1|
+    Lambda zespolona jak w poprzednim, tylko, że tutaj a=-1. Ze wzgledu na to wykresem będzie spirala.
     Strzałki skierowane do środka, więc system stabilny.
 10)
-    |xa  xb|
-    |-xb xa|
-    xa>0
-    xb>=1
+    | 1  1|
+    |-1  1|
     kontrast dla punktu 9), ponieważ tutaj strzałki idą na zewnątrz, układ jest niestabilny.
 

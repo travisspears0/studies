@@ -32,7 +32,8 @@ scal([A|T1],[B|T2]) when A>B  -> [B]++scal([A]++T1,T2);
 scal(L,[]) -> scal(L);
 scal([],L) -> scal(L).
 
-printarr([A]) -> io:format("~p~n", [A]);
+printarr([]) -> io:format("~n", []);
+printarr([A]) -> io:format("~p", [A]);
 printarr([H|T]) ->
 	io:format("~p ",[H]),
 	printarr(T).

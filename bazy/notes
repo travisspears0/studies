@@ -1,10 +1,13 @@
 *select distinct
 	zwraca tylko rozne wyniki
 *case [expression] when [condition] then [result]
-*ziory
+*zbiory
 	*union		(+)
 	*intersect	(*)
 	*except		(-)
-*
-*
+*wybiera tylko np dni z daty
+	extract(day from jakasdata)
+	date_part('day',jakasdata)
+*select current_date;
+	zwraca aktualna date
 *
