@@ -3,22 +3,27 @@ clearvars;
 close all;
 clc;
 model='lab3_model_2';
-%przykladowe macierze i wartosc poczatkowa
-A = [-2  0;0 -3];
-B = [-1;4];
-C = eye(2);%[1.5 0.2];
-WPC = 1;
-n=5;
+%macierze A, B, C
+A = [0 1;-5 -8];
+B = [0;1];
+C = eye(2);
+freq = .1;
+%wartosc poczatkowa
+WPC = 0;
+%ilosc iteracji
+n=6;
+%poczatkowa wartosc h
+h = 0.1;
 for i=1:n
     %h zwieksza sie z kazda iteracja
-    h=.1+i*.4;
+    h=h+i/5;
     %wyliczanie macierzy A+,B+,C+ ze wzorow
     x=sym('x');
-    AP = exp(A*h);
+    AP = expm(A*h);
     BP = double( int(expm(x*A)*B,x,0,h));%calka od 0 do h
     CP=C;
     %symulacja
-    sim('lab3_model_2');
+    sim(model);
     %rysowanie wykresu
     figure;
     plot(simout);

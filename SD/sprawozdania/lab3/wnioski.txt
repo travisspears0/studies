@@ -1,0 +1,17 @@
+zadanie 1(script1.m,lab_model.slx):
+    Przestawiłem wykresy dla wartości lambda z poszczególnych przedziałów takich jak w 1.3.1.
+zadanie 2(script2.m,lab_model_2.slx):
+    Modelujemy 2 systemy równolegle podając sygnał idący z sine wave i zoh.
+    Macierze A+, B+ i C+ wyliczyłem z podanych wzrów.
+    Aby dobrze zobrazować działanie takiego układu wygenerowałem kilka wykresów dla różnych wartości h(okresu próbkowania).
+    Łatwo zauważyć, że im mniejsze jest h tym więcej jest momentów ih, dla których wykresy mają punkty wspólne, więc zachodzi proces aproksymacji.
+zadanie 3(script3.m,lab_model_2.slx):
+    Posłużyłem się modele z poprzedniego ćwiczenia. Na wejściu podałem sine wave ale z parametrem 
+    frequency = 0.1, aby móc obserwować wykres tylko w przedziale, na którym funkcja rośnie
+    (rozumiem, że zakładamy, iż nasz kapitał rośnie). Z wykresu widać, że są, tak jak w poprzednim ćwiczeniu,
+    miejsca wspólne wykresów, jednak między nimi wykres bardziej 'skokowy' jest zawsze pod wykresem docelowym
+    (co działa na niekorzyść klienta).
+    Im mniejszy dobierzemy okres róbkowania tym różnice są mniejsze i wykresy zbliżają się do siebie. Z tego wynika,
+    że im częściej odsetki są dopisywane do salda, tym lepiej dla klienta.
+zadanie 4:
+    
