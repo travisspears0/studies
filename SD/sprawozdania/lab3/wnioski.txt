@@ -1,5 +1,5 @@
 zadanie 1(script1.m,lab3_model.slx):
-    Przestawiłem wykresy dla wartości lambda z poszczególnych przedziałów takich jak w 1.3.1.
+    Przedstawiłem wykresy dla wartości lambda z poszczególnych przedziałów takich jak w 1.3.1.
 zadanie 2(script2.m,lab3_model_2.slx):
     Modelujemy 2 systemy równolegle podając sygnał idący z sine wave i zoh.
     Macierze A+, B+ i C+ wyliczyłem z podanych wzrów.
