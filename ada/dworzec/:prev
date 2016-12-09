@@ -1,0 +1,5 @@
+generic
+	--type citiestype is private;
+package autobus is
+	procedure travel(destination: citiex);
+end autobus;
