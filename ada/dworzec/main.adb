@@ -3,26 +3,12 @@ use ada.text_io;
 
 procedure main is
 
-	subtype rndtype is integer range 1..3;
+	cities: constant integer := 4;
 
-        type cities is (
-                a,b,c,e);
-                --alwiernia,
-                --andrychow,
-                --chrzanow,
-                --dobczyce,
-                --gorlice,
-                --muszyna,
-                --myslenice,
-                --niepolomice,
-                --tymbark,
-                --zakopane,
-                --rytro,
-                --rabka,
-                --jordanow,
-                --tarnow);
+	subtype rndcitytype is integer range 1..cities;
+	subtype rndwaittype is integer range 1..3;
 
-        package d is new dworzec(2);
+        package d is new dworzec(cities);
 	--
 	task action_receiver is
 		entry get_action(action:character);
@@ -30,11 +16,14 @@ procedure main is
 	end action_receiver; 
 	task body action_receiver is
 		current_action: character := ' ';
-		package rndpackage is new ada.numerics.discrete_random(rndtype);
-		use rndpackage;
-		rnd: generator;
+		package rndpackagewait is new ada.numerics.discrete_random(rndwaittype);
+		package rndpackagecity is new ada.numerics.discrete_random(rndcitytype);
+		use rndpackagewait, rndpackagecity;
+		rndw: rndpackagewait.generator;
+		rndc: rndpackagecity.generator;
 	begin
-		reset(rnd);
+		reset(rndw);
+		reset(rndc);
 		d.print_actions;
 		loop
 			select
@@ -45,10 +34,10 @@ procedure main is
 				delay 0.2;
 				if current_action /= ' ' then
 					case current_action is
-						when 'a' => d.take_slot(duration(2+random(rnd)));
+						when 'a' => d.take_slot(duration(2+random(rndw)), random(rndc));
 						when 's' => d.print_state;
 						when '?' => d.print_actions;
-						when others => put_line("unknown action, ignored");
+						when others => put_line("unknown action "& current_action &", ignored");
 					end case;
 					current_action := ' ';
 				end if;
@@ -64,9 +53,9 @@ begin
 	loop
 		get(action);
 		action_receiver.get_action(action);
-		if action = 'q' then exit; end if;
+		if action = 'c' then exit; end if;
 		
 	end loop;
 	action_receiver.quit;
-	put_line("over!");
+	put_line("closing station");
 end main;

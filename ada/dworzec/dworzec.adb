@@ -24,17 +24,17 @@ package body dworzec is
 		put_line("actions:");
                 put_line("a - add bus");
                 put_line("s - print station state");
-                put_line("q - quit");
+                put_line("c - close station");
                 put_line("? - help");
 	end;
 	--
-	procedure take_slot(time: duration) is
+	procedure take_slot(time: duration; city: integer) is
 		free_slot: integer;
 		wait_task : wait_task_pointer;
 	begin
 		free_slot := get_free_slot;
 		if free_slot /= -1 then
-			put_line("taking slot ("& free_slot'img &") for " & time'img);
+			put_line("taking slot ("& free_slot'img &") for " & time'img & ", destination: " & city'img);
 			wait_task := new wait_task_type(new duration'(time),new integer'(free_slot));
 		else
 			put_line("there are no free slots");
@@ -44,7 +44,7 @@ package body dworzec is
 	procedure print_state is
 	begin
 		for i in 1..places loop
-			put("slot " & i'img & "is");
+			put("slot" & i'img & " is");
 			if busy_pool(i) = true then 
 				put(" free");
 			else
@@ -53,13 +53,6 @@ package body dworzec is
 			put_line("");
 		end loop;
 	end;
-	--
-	--procedure quit is
-	--begin
-	--	for i in 1..places loop
-	--		wait_pool(i).stop;
-	--	end loop;
-	--end;
 	--
 	function get_free_slot return integer is
 	begin
