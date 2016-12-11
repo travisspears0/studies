@@ -1,0 +1,101 @@
+V "GNAT Lib v4.9"
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_ANONYMOUS_ALLOCATORS
+RV NO_COEXTENSIONS
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_ALLOCATORS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV SPARK_05
+RV MAX_TASKS=1+
+
+U station%b		station.adb		ef37bbef NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U station%s		station.ads		9d6bd83d BN EE NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20140225151544 66457d31
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20120426100351 3f91d4c5
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D station.ads		20161211200617 a2fa0cf8
+D station.adb		20161211200608 4a319606
+D system.ads		20160213141829 90249111
+D s-atocou.ads		20131010110730 cd7c94ca
+D s-atocou.adb		20131010121735 62bad392
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stposu.ads		20121005142121 ffeba1c5
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 ada.ads
+16K9*Ada 19e8 16|1r6 2r5 17|1r6 1r19 2r5 2r18
+X 8 a-string.ads
+16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
+X 10 a-strunb.ads
+76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
+79R9*Unbounded_String<5|48R9> 473e14 16|10r37 17|35r37 36r25
+94V13*To_Unbounded_String{79R9} 17|38s27 41s52 43s52
+119V14*"&"{79R9} 17|41s50 43s50
+X 12 a-textio.ads
+49K13*Text_IO 471e16 17|1w10 2r9
+263U14*Put_Line 17|12s17 16s17 28s25 31s25
+X 16 station.ads
+5i9 places{positive} 17|6r30 39r29 51r29
+6k9*station 5z9 11l5 11e12 17|4b14 57l5 57t12
+7U19*take_slot 7>29 7>45 17|22b19 33l13 33t22
+7o29 time{duration} 17|22b29 28r77 29r71
+7i45 id{positive} 17|22b45 28r101 29r116
+9V18*get_free_slot{integer} 17|26s30 49b18 55l13 55t26
+10V18*print_state{10|79R9} 17|35b18 47t12
+X 17 station.adb
+6a9 state_pool(integer) 13m17 15m17 40r28 41r86 52r28
+8T19 wait_task_type 8d34 8d56 8d78 10b19 17t12 19r46 29r42
+19P14 wait_task_pointer(8T19) 24r29
+23i17 free_slot{integer} 26m17 27r20 28r51 29r90
+24p17 wait_task{19P14} 29m25
+36r17 result{10|79R9} 38m17 41m33 41r43 43m33 43r43 46r24
+39i21 i{integer} 40r39 41r72 41r97 43r72
+51i21 i{integer} 52r39 52r58
+
