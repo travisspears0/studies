@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: adasockets
+Description: BSD sockets in Ada.
+Requires:
+Version: 1.10.1
+Libs: -L${libdir} -ladasockets
+Cflags: -I${libdir}/adasockets -L${libdir}/adasockets

@@ -1,0 +1,34 @@
+V "GNAT Lib v4.9"
+P SS ZX
+
+RN
+
+U sockets.link%s	sockets-link.ads	4716ae54 NE OO PK
+W sockets%s		sockets.adb		sockets.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D sockets.ads		20161211155127 c7635c3a
+D sockets-link.ads	20161211155127 8075f26e
+D system.ads		20160213141829 90249111
+D s-exctab.ads		20140225151139 54135002
+D s-parame.ads		20140225151139 ab8cb46a
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+X 8 sockets.ads
+42K9*Sockets 254e12 9|42r17 48r5
+X 9 sockets-link.ads
+42K25*Link 8|42k9 9|48l13 48e17
+

@@ -1,0 +1,122 @@
+V "GNAT Lib v4.9"
+A -O2
+A -gnatp
+A -gnatn
+A -gnatg
+P SS ZX
+
+RN
+
+U sockets.constants%s	sockets-constants.ads	494b52ec NE OO PK
+W sockets%s		sockets.adb		sockets.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D sockets.ads		20160921105454 c7635c3a
+D sockets-constants.ads	20161211152752 8e280ed6
+D system.ads		20160213141829 90249111
+D s-exctab.ads		20140225151139 54135002
+D s-parame.ads		20140225151139 ab8cb46a
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+X 8 sockets.ads
+42K9*Sockets 254e12 9|3r9 88r5
+X 9 sockets-constants.ads
+3K17*Constants 8|42k9 9|88l13 88e22
+4N4*Tcp_Nodelay
+5N4*Af_Inet
+6N4*Af_Unix
+7N4*Sock_Stream
+8N4*Sock_Dgram
+9N4*Eintr
+10N4*Eagain
+11N4*Ewouldblock
+12N4*Einprogress
+13N4*Ealready
+14N4*Eisconn
+15N4*Econnrefused
+16N4*Fndelay
+17N4*Fasync
+18N4*F_Getfl
+19N4*F_Setfl
+20N4*F_Setown
+21N4*So_Rcvbuf
+22N4*So_Reuseaddr
+23N4*So_Reuseport
+24N4*Sol_Socket
+25N4*Sigterm
+26N4*Sigkill
+27N4*O_Rdonly
+28N4*O_Wronly
+29N4*O_Rdwr
+30N4*Host_Not_Found
+31N4*Try_Again
+32N4*No_Recovery
+33N4*No_Data
+34N4*No_Address
+35N4*Pollin
+36N4*Pollpri
+37N4*Pollout
+38N4*Pollerr
+39N4*Pollhup
+40N4*Pollnval
+41N4*I_Setsig
+42N4*S_Rdnorm
+43N4*S_Wrnorm
+44N4*Ipproto_Ip
+45N4*Ip_Add_Membership
+46N4*Ip_Multicast_Loop
+47N4*Ip_Multicast_Ttl
+48N4*Ip_Drop_Membership
+49N4*O_Nonblock
+50N4*Msg_Peek
+51N4*Fionbio
+52N4*Fionread
+53N4*So_Sndbuf
+54N4*Sol_Tcp
+55N4*So_Keepalive
+56N4*Tcp_Keepcnt
+57N4*Tcp_Keepidle
+58N4*Tcp_Keepintvl
+59N4*So_Nosigpipe
+60N4*Msg_Nosignal
+61N4*Af_Inet6
+62N4*Ai_Addrconfig
+63N4*Ai_All
+64N4*Ai_Canonname
+65N4*Ai_Default
+66N4*Ai_Mask
+67N4*Ai_Numerichost
+68N4*Ai_Passive
+69N4*Ai_V4mapped
+70N4*Ai_V4mapped_Cfg
+71N4*Ni_Dgram
+72N4*Ni_Maxhost
+73N4*Ni_Maxserv
+74N4*Ni_Namereqd
+75N4*Ni_Nofqdn
+76N4*Ni_Numerichost
+77N4*Ni_Numericserv
+78N4*Ni_Withscopeid
+79N4*Ipproto_Ipv6
+80N4*Ipv6_Unicast_Hops
+81N4*Ipv6_Multicast_If
+82N4*Ipv6_Multicast_Hops
+83N4*Ipv6_Multicast_Loop
+84N4*Ipv6_Join_Group
+85N4*Ipv6_Leave_Group
+86N4*Siocinq
+87N4*Siocoutq
+

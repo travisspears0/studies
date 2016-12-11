@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_l9ovcL-gEeagfNCrRbH5EA" name="RootElement">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_tfPqQL-hEeagfNCrRbH5EA" name="Centrala"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uqTIIL-hEeagfNCrRbH5EA" name="Ratownicy"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_w7CbsL-hEeagfNCrRbH5EA" name="Zgłaszający"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9CCpwL-hEeagfNCrRbH5EA" name="Zgłoszenie wypadku"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_BfzOgL-iEeagfNCrRbH5EA" name="Odwołanie zgłoszenia"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DyYVIL-iEeagfNCrRbH5EA" name="Udzielenie Pierwszej pomocy"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HcMUcL-iEeagfNCrRbH5EA" name="Eskorta do szpitala"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_R93jcL-iEeagfNCrRbH5EA" memberEnd="_R95_sL-iEeagfNCrRbH5EA _R96mwL-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R94xkL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R95YoL-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_R95_sL-iEeagfNCrRbH5EA" name="centrala" type="_tfPqQL-hEeagfNCrRbH5EA" association="_R93jcL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_R96mwL-iEeagfNCrRbH5EA" name="zgłoszenie zapotrzebowania na karetkę" type="_9CCpwL-hEeagfNCrRbH5EA" association="_R93jcL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TETAAL-iEeagfNCrRbH5EA" memberEnd="_TEU1ML-iEeagfNCrRbH5EA _TEU1Mb-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TEUOIL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TEUOIb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TEU1ML-iEeagfNCrRbH5EA" name="zgłoszenie zapotrzebowania na karetkę" type="_9CCpwL-hEeagfNCrRbH5EA" association="_TETAAL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TEU1Mb-iEeagfNCrRbH5EA" name="zgłaszający" type="_w7CbsL-hEeagfNCrRbH5EA" association="_TETAAL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UtfLYL-iEeagfNCrRbH5EA" memberEnd="_Utfycr-iEeagfNCrRbH5EA _Utfyc7-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UtfycL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Utfycb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Utfycr-iEeagfNCrRbH5EA" name="zgłaszający" type="_w7CbsL-hEeagfNCrRbH5EA" association="_UtfLYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Utfyc7-iEeagfNCrRbH5EA" name="odwołanie zgłoszenia" type="_BfzOgL-iEeagfNCrRbH5EA" association="_UtfLYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VhXfYL-iEeagfNCrRbH5EA" memberEnd="_VhYtgL-iEeagfNCrRbH5EA _VhYtgb-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VhYGcL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VhYGcb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VhYtgL-iEeagfNCrRbH5EA" name="centrala" type="_tfPqQL-hEeagfNCrRbH5EA" association="_VhXfYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VhYtgb-iEeagfNCrRbH5EA" name="odwołanie zgłoszenia" type="_BfzOgL-iEeagfNCrRbH5EA" association="_VhXfYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dhSjUL-iEeagfNCrRbH5EA" memberEnd="_dhTxcr-iEeagfNCrRbH5EA _dhUYgL-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dhTxcL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dhTxcb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dhTxcr-iEeagfNCrRbH5EA" name="ratownicy" type="_uqTIIL-hEeagfNCrRbH5EA" association="_dhSjUL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dhUYgL-iEeagfNCrRbH5EA" name="udzielenie pierwszej pomocy" type="_DyYVIL-iEeagfNCrRbH5EA" association="_dhSjUL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_eMomYL-iEeagfNCrRbH5EA" memberEnd="_eMpNcb-iEeagfNCrRbH5EA _eMpNcr-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eMomYb-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eMpNcL-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_eMpNcb-iEeagfNCrRbH5EA" name="zgłaszający" type="_w7CbsL-hEeagfNCrRbH5EA" association="_eMomYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_eMpNcr-iEeagfNCrRbH5EA" name="udzielenie pierwszej pomocy" type="_DyYVIL-iEeagfNCrRbH5EA" association="_eMomYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hxqzYL-iEeagfNCrRbH5EA" memberEnd="_hxracr-iEeagfNCrRbH5EA _hxsBgL-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hxracL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hxracb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hxracr-iEeagfNCrRbH5EA" name="eskorta do szpitala" type="_HcMUcL-iEeagfNCrRbH5EA" association="_hxqzYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hxsBgL-iEeagfNCrRbH5EA" name="zgłaszający" type="_w7CbsL-hEeagfNCrRbH5EA" association="_hxqzYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iUAEYL-iEeagfNCrRbH5EA" memberEnd="_iUBSgL-iEeagfNCrRbH5EA _iUBSgb-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iUArcL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iUArcb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iUBSgL-iEeagfNCrRbH5EA" name="ratownicy" type="_uqTIIL-hEeagfNCrRbH5EA" association="_iUAEYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iUBSgb-iEeagfNCrRbH5EA" name="eskorta do szpitala" type="_HcMUcL-iEeagfNCrRbH5EA" association="_iUAEYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lsYVcL-iEeagfNCrRbH5EA" name="Sprawdzenie stanu karetki"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_n-W_IL-iEeagfNCrRbH5EA" memberEnd="_n-YNQr-iEeagfNCrRbH5EA _n-YNQ7-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n-YNQL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n-YNQb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_n-YNQr-iEeagfNCrRbH5EA" name="ratownicy" type="_uqTIIL-hEeagfNCrRbH5EA" association="_n-W_IL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_n-YNQ7-iEeagfNCrRbH5EA" name="sprawdzenie stanu karetki" type="_lsYVcL-iEeagfNCrRbH5EA" association="_n-W_IL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4Ikj8L-iEeagfNCrRbH5EA" name="Wskazówki przez telefon"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6TfjYL-iEeagfNCrRbH5EA" memberEnd="_6ThYkL-iEeagfNCrRbH5EA _6ThYkb-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6TgKcL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6TgxgL-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6ThYkL-iEeagfNCrRbH5EA" name="wskazówki przez telefon" type="_4Ikj8L-iEeagfNCrRbH5EA" association="_6TfjYL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6ThYkb-iEeagfNCrRbH5EA" name="centrala" type="_tfPqQL-hEeagfNCrRbH5EA" association="_6TfjYL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_60IyUL-iEeagfNCrRbH5EA" memberEnd="_60KAcr-iEeagfNCrRbH5EA _60KngL-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_60KAcL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_60KAcb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_60KAcr-iEeagfNCrRbH5EA" name="zgłaszający" type="_w7CbsL-hEeagfNCrRbH5EA" association="_60IyUL-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_60KngL-iEeagfNCrRbH5EA" name="wskazówki przez telefon" type="_4Ikj8L-iEeagfNCrRbH5EA" association="_60IyUL-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9dCHML-iEeagfNCrRbH5EA" memberEnd="_9dDVUr-iEeagfNCrRbH5EA _9dD8YL-iEeagfNCrRbH5EA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9dDVUL-iEeagfNCrRbH5EA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9dDVUb-iEeagfNCrRbH5EA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9dDVUr-iEeagfNCrRbH5EA" name="ratownicy" type="_uqTIIL-hEeagfNCrRbH5EA" association="_9dCHML-iEeagfNCrRbH5EA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9dD8YL-iEeagfNCrRbH5EA" name="odwołanie zgłoszenia" type="_BfzOgL-iEeagfNCrRbH5EA" association="_9dCHML-iEeagfNCrRbH5EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_FBKnAL-jEeagfNCrRbH5EA" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_NMRnQL-jEeagfNCrRbH5EA" name="Centrala" coveredBy="_bfrbcL-jEeagfNCrRbH5EA _bfq0YL-jEeagfNCrRbH5EA _f2pbsL-jEeagfNCrRbH5EA _koDVML-jEeagfNCrRbH5EA _koCuIL-jEeagfNCrRbH5EA _leSZoL-jEeagfNCrRbH5EA _leTAsL-jEeagfNCrRbH5EA _uML94L-jEeagfNCrRbH5EA _IcsAwb-lEeagfNCrRbH5EA _IcsAwL-lEeagfNCrRbH5EA _U58ysL-lEeagfNCrRbH5EA _VoeFkL-lEeagfNCrRbH5EA _6X6zkL-mEeagfNCrRbH5EA _6X6MgL-mEeagfNCrRbH5EA _7QASIL-mEeagfNCrRbH5EA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_REUP0L-jEeagfNCrRbH5EA" name="Ratownicy" coveredBy="_yB-uQL-kEeagfNCrRbH5EA _yCAjcL-kEeagfNCrRbH5EA _yB_8YL-kEeagfNCrRbH5EA _yZcMAL-kEeagfNCrRbH5EA _yZbk8L-kEeagfNCrRbH5EA _yzpbwL-kEeagfNCrRbH5EA _yzqC0L-kEeagfNCrRbH5EA _OC40QL-lEeagfNCrRbH5EA _Oc3agL-lEeagfNCrRbH5EA _VodegL-lEeagfNCrRbH5EA _amxyoL-lEeagfNCrRbH5EA _amllYL-lEeagfNCrRbH5EA _xboDcL-lEeagfNCrRbH5EA _9ViQsL-lEeagfNCrRbH5EA _AD3fML-mEeagfNCrRbH5EA _AD4GQL-mEeagfNCrRbH5EA _V3QTAL-mEeagfNCrRbH5EA _Wu5FoL-mEeagfNCrRbH5EA _aLB1Ub-mEeagfNCrRbH5EA _aLB1UL-mEeagfNCrRbH5EA _dbxNUL-mEeagfNCrRbH5EA _dbybcL-mEeagfNCrRbH5EA _Wu33gL-mEeagfNCrRbH5EA _lLSdwL-mEeagfNCrRbH5EA _qUaTsb-mEeagfNCrRbH5EA _qToQkL-mEeagfNCrRbH5EA _qTnpgL-mEeagfNCrRbH5EA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_STR9UL-jEeagfNCrRbH5EA" name="Zgłaszający" coveredBy="_aIVOAL-jEeagfNCrRbH5EA _aIWcIb-jEeagfNCrRbH5EA _aIWcIL-jEeagfNCrRbH5EA _f2o0oL-jEeagfNCrRbH5EA _to0LEL-jEeagfNCrRbH5EA _tozkAL-jEeagfNCrRbH5EA _uMNMAL-jEeagfNCrRbH5EA _5heTwL-mEeagfNCrRbH5EA _5hfh4L-mEeagfNCrRbH5EA _5he60L-mEeagfNCrRbH5EA _7P_rEL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aIVOAL-jEeagfNCrRbH5EA" name="ActionExecSpecStart" covered="_STR9UL-jEeagfNCrRbH5EA" execution="_aIWcIL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aIWcIb-jEeagfNCrRbH5EA" name="ActionExecSpecFinish" covered="_STR9UL-jEeagfNCrRbH5EA" execution="_aIWcIL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_koCuIL-jEeagfNCrRbH5EA" name="ActionExecSpec1" covered="_NMRnQL-jEeagfNCrRbH5EA" finish="_koDVML-jEeagfNCrRbH5EA" start="_leTAsL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_tozkAL-jEeagfNCrRbH5EA" name="ActionExecSpec2" covered="_STR9UL-jEeagfNCrRbH5EA" finish="_to0LEL-jEeagfNCrRbH5EA" start="_uMNMAL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uMNMAL-jEeagfNCrRbH5EA" name="MessageRecv1" covered="_STR9UL-jEeagfNCrRbH5EA" message="_uMJhoL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_yB-uQL-kEeagfNCrRbH5EA" name="ActionExecSpec3Start" covered="_REUP0L-jEeagfNCrRbH5EA" execution="_yB_8YL-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yzpbwL-kEeagfNCrRbH5EA" name="MessageSend2" covered="_REUP0L-jEeagfNCrRbH5EA" message="_yzoNoL-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_to0LEL-jEeagfNCrRbH5EA" name="ActionExecSpec2Finish" covered="_STR9UL-jEeagfNCrRbH5EA" execution="_tozkAL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yzqC0L-kEeagfNCrRbH5EA" name="MessageRecv2" covered="_REUP0L-jEeagfNCrRbH5EA" message="_yzoNoL-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_yZcMAL-kEeagfNCrRbH5EA" name="ActionExecSpec4Finish" covered="_REUP0L-jEeagfNCrRbH5EA" execution="_yZbk8L-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VodegL-lEeagfNCrRbH5EA" name="MessageSend5" covered="_REUP0L-jEeagfNCrRbH5EA" message="_VocQYL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AD3fML-mEeagfNCrRbH5EA" name="MessageSend6" covered="_REUP0L-jEeagfNCrRbH5EA" message="_AD1qAL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Wu33gL-mEeagfNCrRbH5EA" name="MessageSend" covered="_REUP0L-jEeagfNCrRbH5EA" message="_Wu3QcL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_IcsAwL-lEeagfNCrRbH5EA" name="ActionExecSpec5" covered="_NMRnQL-jEeagfNCrRbH5EA" finish="_IcsAwb-lEeagfNCrRbH5EA" start="_VoeFkL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_IcsAwb-lEeagfNCrRbH5EA" name="ActionExecSpec5Finish" covered="_NMRnQL-jEeagfNCrRbH5EA" execution="_IcsAwL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_U58ysL-lEeagfNCrRbH5EA" name="ActionExecSpec5Start" covered="_NMRnQL-jEeagfNCrRbH5EA" execution="_IcsAwL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_amllYL-lEeagfNCrRbH5EA" name="CombinedFragment" covered="_REUP0L-jEeagfNCrRbH5EA" interactionOperator="alt">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_amxyoL-lEeagfNCrRbH5EA" name="InteractionOperand" covered="_REUP0L-jEeagfNCrRbH5EA">
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_9ViQsL-lEeagfNCrRbH5EA" name="ActionExecSpec" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_dbxNUL-mEeagfNCrRbH5EA" start="_AD4GQL-mEeagfNCrRbH5EA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AD4GQL-mEeagfNCrRbH5EA" name="MessageRecv6" covered="_REUP0L-jEeagfNCrRbH5EA" message="_AD1qAL-mEeagfNCrRbH5EA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dbxNUL-mEeagfNCrRbH5EA" name="MessageSend" covered="_REUP0L-jEeagfNCrRbH5EA" message="_dbvYIL-mEeagfNCrRbH5EA"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_amyZsL-lEeagfNCrRbH5EA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_0k0B8L-lEeagfNCrRbH5EA" value="Wymaga eskorty"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_amzAwL-lEeagfNCrRbH5EA" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_amyZsr-lEeagfNCrRbH5EA"/>
+        </guard>
+      </operand>
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_xboDcL-lEeagfNCrRbH5EA" name="InteractionOperand0" covered="_REUP0L-jEeagfNCrRbH5EA">
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_V3QTAL-mEeagfNCrRbH5EA" name="ActionExecSpec" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_lLSdwL-mEeagfNCrRbH5EA" start="_Wu5FoL-mEeagfNCrRbH5EA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Wu5FoL-mEeagfNCrRbH5EA" name="MessageRecv" covered="_REUP0L-jEeagfNCrRbH5EA" message="_Wu3QcL-mEeagfNCrRbH5EA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lLSdwL-mEeagfNCrRbH5EA" name="MessageSend" covered="_REUP0L-jEeagfNCrRbH5EA"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_xboqgL-lEeagfNCrRbH5EA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_2ATIgL-lEeagfNCrRbH5EA" value="Nie wymaga eskorty"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_xbpRkb-lEeagfNCrRbH5EA" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_xbpRkL-lEeagfNCrRbH5EA"/>
+        </guard>
+      </operand>
+    </fragment>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qUaTsb-mEeagfNCrRbH5EA" name="MessageRecv" covered="_REUP0L-jEeagfNCrRbH5EA" message="_qRI9QL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dbybcL-mEeagfNCrRbH5EA" name="MessageRecv" covered="_REUP0L-jEeagfNCrRbH5EA" message="_dbvYIL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_5heTwL-mEeagfNCrRbH5EA" name="ActionExecSpec10Start" covered="_STR9UL-jEeagfNCrRbH5EA" execution="_5he60L-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qToQkL-mEeagfNCrRbH5EA" name="ActionExecSpec9Finish" covered="_REUP0L-jEeagfNCrRbH5EA" execution="_qTnpgL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_6X6MgL-mEeagfNCrRbH5EA" name="ActionExecSpec11" covered="_NMRnQL-jEeagfNCrRbH5EA" finish="_6X6zkL-mEeagfNCrRbH5EA" start="_7QASIL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Oc3agL-lEeagfNCrRbH5EA" name="MessageRecv4" covered="_REUP0L-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_aIWcIL-jEeagfNCrRbH5EA" name="ActionExecSpec" covered="_STR9UL-jEeagfNCrRbH5EA" finish="_aIWcIb-jEeagfNCrRbH5EA" start="_aIVOAL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_f2o0oL-jEeagfNCrRbH5EA" name="MessageSend" covered="_STR9UL-jEeagfNCrRbH5EA" message="_f2nmgL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_bfq0YL-jEeagfNCrRbH5EA" name="ActionExecSpec0" covered="_NMRnQL-jEeagfNCrRbH5EA" finish="_bfrbcL-jEeagfNCrRbH5EA" start="_f2pbsL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_f2pbsL-jEeagfNCrRbH5EA" name="MessageRecv" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_f2nmgL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_leSZoL-jEeagfNCrRbH5EA" name="MessageSend0" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_leRLgL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_bfrbcL-jEeagfNCrRbH5EA" name="ActionExecSpec0Finish" covered="_NMRnQL-jEeagfNCrRbH5EA" execution="_bfq0YL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_leTAsL-jEeagfNCrRbH5EA" name="MessageRecv0" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_leRLgL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uML94L-jEeagfNCrRbH5EA" name="MessageSend1" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_uMJhoL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_koDVML-jEeagfNCrRbH5EA" name="ActionExecSpec1Finish" covered="_NMRnQL-jEeagfNCrRbH5EA" execution="_koCuIL-jEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_yB_8YL-kEeagfNCrRbH5EA" name="ActionExecSpec3" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_yCAjcL-kEeagfNCrRbH5EA" start="_yB-uQL-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_yCAjcL-kEeagfNCrRbH5EA" name="ActionExecSpec3Finish" covered="_REUP0L-jEeagfNCrRbH5EA" execution="_yB_8YL-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_yZbk8L-kEeagfNCrRbH5EA" name="ActionExecSpec4" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_yZcMAL-kEeagfNCrRbH5EA" start="_yzqC0L-kEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_OC40QL-lEeagfNCrRbH5EA" name="ActionExecSpec6" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_Wu33gL-mEeagfNCrRbH5EA" start="_Oc3agL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VoeFkL-lEeagfNCrRbH5EA" name="MessageRecv5" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_VocQYL-lEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_aLB1UL-mEeagfNCrRbH5EA" name="ActionExecSpec7" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_aLB1Ub-mEeagfNCrRbH5EA" start="_dbybcL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aLB1Ub-mEeagfNCrRbH5EA" name="ActionExecSpec7Finish" covered="_REUP0L-jEeagfNCrRbH5EA" execution="_aLB1UL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_qTnpgL-mEeagfNCrRbH5EA" name="ActionExecSpec9" covered="_REUP0L-jEeagfNCrRbH5EA" finish="_qToQkL-mEeagfNCrRbH5EA" start="_qUaTsb-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_5he60L-mEeagfNCrRbH5EA" name="ActionExecSpec10" covered="_STR9UL-jEeagfNCrRbH5EA" finish="_5hfh4L-mEeagfNCrRbH5EA" start="_5heTwL-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_5hfh4L-mEeagfNCrRbH5EA" name="ActionExecSpec10Finish" covered="_STR9UL-jEeagfNCrRbH5EA" execution="_5he60L-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7QASIL-mEeagfNCrRbH5EA" name="MessageRecv6" covered="_NMRnQL-jEeagfNCrRbH5EA" message="_7P-c8L-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7P_rEL-mEeagfNCrRbH5EA" name="MessageSend7" covered="_STR9UL-jEeagfNCrRbH5EA" message="_7P-c8L-mEeagfNCrRbH5EA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_6X6zkL-mEeagfNCrRbH5EA" name="ActionExecSpec11Finish" covered="_NMRnQL-jEeagfNCrRbH5EA" execution="_6X6MgL-mEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_f2nmgL-jEeagfNCrRbH5EA" name="Zgłoś wypadek" receiveEvent="_f2pbsL-jEeagfNCrRbH5EA" sendEvent="_f2o0oL-jEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_leRLgL-jEeagfNCrRbH5EA" name="Dodaj zgłoszenie do kolejki czekania" receiveEvent="_leTAsL-jEeagfNCrRbH5EA" sendEvent="_leSZoL-jEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_uMJhoL-jEeagfNCrRbH5EA" name="Powiadom o realizacji i udziel porad telefonicznie" receiveEvent="_uMNMAL-jEeagfNCrRbH5EA" sendEvent="_uML94L-jEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_yzoNoL-kEeagfNCrRbH5EA" name="Ściągnij zgłoszenie z kolejki czekania i jedź na miejsce" receiveEvent="_yzqC0L-kEeagfNCrRbH5EA" sendEvent="_yzpbwL-kEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_VocQYL-lEeagfNCrRbH5EA" name="zdaj raport" receiveEvent="_VoeFkL-lEeagfNCrRbH5EA" sendEvent="_VodegL-lEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_AD1qAL-mEeagfNCrRbH5EA" name="Eskortuj do szpitala" messageSort="asynchCall" receiveEvent="_AD4GQL-mEeagfNCrRbH5EA" sendEvent="_AD3fML-mEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_Wu3QcL-mEeagfNCrRbH5EA" name="wyszukaj inne zgłoszenia w okolicy" receiveEvent="_Wu5FoL-mEeagfNCrRbH5EA" sendEvent="_Wu33gL-mEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_dbvYIL-mEeagfNCrRbH5EA" name="Sprawdź stan pojazdu i obsługuj" receiveEvent="_dbybcL-mEeagfNCrRbH5EA" sendEvent="_dbxNUL-mEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_qRI9QL-mEeagfNCrRbH5EA" name="dalej" receiveEvent="_qUaTsb-mEeagfNCrRbH5EA"/>
+    <message xmi:type="uml:Message" xmi:id="_7P-c8L-mEeagfNCrRbH5EA" name="Odwołaj zgłoszenie" receiveEvent="_7QASIL-mEeagfNCrRbH5EA" sendEvent="_7P_rEL-mEeagfNCrRbH5EA"/>
+  </packagedElement>
+</uml:Model>

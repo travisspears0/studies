@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/bb/things/studies/repo/aimo/Winda"/>
+	</list>
 	<list key="installedFeatures">
 		<item value="org.eclipse.cvs:1.4.300.v20160907-1200"/>
 		<item value="org.eclipse.draw2d.sdk:3.10.100.201606061308"/>
@@ -106,4 +109,6 @@
 		<item value="org.eclipse.xsd.mapping:2.9.0.v20160526-0356"/>
 		<item value="org.eclipse.xsd:2.12.0.v20160526-0356"/>
 	</list>
+	<section name="NewWizardAction">
+	</section>
 </section>

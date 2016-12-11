@@ -1,0 +1,76 @@
+V "GNAT Lib v4.9"
+A -O2
+A -gnatp
+A -gnatn
+A -gnatg
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+
+U sockets.stream_io%b	sockets-stream_io.adb	92db0f34 NE OO PK
+W sockets%s		sockets.adb		sockets.ali
+
+U sockets.stream_io%s	sockets-stream_io.ads	9ecfd0b2 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W sockets%s		sockets.adb		sockets.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D sockets.ads		20160921105454 c7635c3a
+D sockets-stream_io.ads	20160921105454 4334cbc8
+D sockets-stream_io.adb	20160921105454 d1efc4fc
+D system.ads		20160213141829 90249111
+D s-exctab.ads		20140225151139 54135002
+D s-parame.ads		20140225151139 ab8cb46a
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+X 1 ada.ads
+16K9*Ada 19e8 9|39r6 43r35 53r20 54r20 58r16 62r35 10|59r20 60r20 73r16
+X 3 a-stream.ads
+36K13*Streams 84e16 9|39w10 43r39 53r24 54r24 58r20 62r39 10|59r24 60r24
+. 73r20
+39H9*Root_Stream_Type 67e64 9|43r47 62r47
+42M9*Stream_Element
+44I9*Stream_Element_Offset<long_integer> 9|54r32 10|60r32
+51A9*Stream_Element_Array(42M9)<44I9> 9|53r32 58r28 10|59r32 73r28
+X 8 sockets.ads
+42K9*Sockets 254e12 9|41r9 66r5 10|39r14 79r5
+44R9*Socket_FD 247e14 9|47r16 63r12 10|47r16
+128U14*Send 10|76s7
+138U14*Receive 10|63s7
+X 9 sockets-stream_io.ads
+41K17*Stream_IO 8|42k9 9|62E9 66l13 66e22 10|39b22 79l13 79t22
+43R9*Socket_Stream_Type<3|39R9> 45p14 46r23 51P14 52r23 56P14 57r23 62c9
+. 64e14 10|46r23 58r23 72r23
+45U14*Initialize 46=7 47>7 10|45b14 51l8 51t18
+46r7 Stream{43R9} 10|46b7 50m7
+47r7 FD{8|44R9} 10|47b7 50r20
+51U14*Read<3|54p14> 52=7 53<7 54<7 10|57b14 65l8 65t12
+52r7 Stream{43R9} 10|58b7 63r16
+53a7 Item{3|51A9} 10|59b7 63m27 64r15
+54i7 Last{3|44I9} 10|60b7 64m7
+56U14*Write<3|60p14> 57=7 58>7 10|71b14 77l8 77t13
+57r7 Stream{43R9} 10|72b7 76r13
+58a7 Item{3|51A9} 10|73b7 76r24
+63r7 FD{8|44R9} 10|50m14 63r23 76r20
+

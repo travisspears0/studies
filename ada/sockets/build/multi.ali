@@ -1,0 +1,124 @@
+V "GNAT Lib v4.9"
+M P W=b
+P SS ZX
+
+RN
+RV NO_DELAY
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLICIT_DYNAMIC_CODE
+RV NO_RELATIVE_DELAY
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+RV MAX_TASKS=1+
+
+U multi%b		multi.adb		cf27602e NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W sockets%s		sockets.adb		sockets.ali
+W sockets.multicast%s	sockets-multicast.adb	sockets-multicast.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20120515092648 d86d6c8c
+D a-caldel.ads		20140120152337 9f20b83d
+D a-comlin.ads		20140225151544 ea62afbc
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D i-cstrea.ads		20130412125801 8128536b
+D multi.adb		20161211160115 e0cdae62
+D sockets.ads		20161211155127 c7635c3a
+D sockets-multicast.ads	20161211155127 058fd527
+D sockets-types.ads	20161211155127 92a98f6e
+D system.ads		20160213141829 90249111
+D s-atacco.ads		20120515093410 4c36d12f
+D s-conca2.ads		20140225151544 02a0d7d0
+D s-conca3.ads		20140225151544 0b705ca5
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-linux.ads		20140409145429 5b2f79a5
+D s-multip.ads		20101011073009 38ac9f73
+D s-oscons.ads		20160213141902 a445b120
+D s-osinte.ads		20140409145429 59011f13
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stausa.ads		20110804134155 017a0a05
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stratt.ads		20131014135145 aedef97e
+D s-tasinf.ads		20120730151500 21316953
+D s-taspri.ads		20110927094500 15f617a8
+D s-taprop.ads		20111212143339 1dd2e1b6
+D s-taskin.ads		20140131154341 3f821f32
+D s-tassta.ads		20121029110946 70812003
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 ada.ads
+16K9*Ada 19e8 16|1r6 1r29 2r6 2r29 3r6 3r29
+X 4 a-comlin.ads
+38K13*Command_Line 139e21 16|1w10 1r33
+41V13*Argument_Count{natural} 16|36s10
+48V13*Argument{string} 16|14s36
+X 5 a-except.ads
+53K13*Exceptions 360e19 16|2w10 2r33
+103V13*Exception_Information{string} 16|24s20 35s17
+X 11 a-textio.ads
+49K13*Text_IO 471e16 16|3w10 3r33
+263U14*Put_Line 16|18s10 23s10 29s7 30s7 34s7 37s10
+X 16 multi.adb
+6U11*Multi 6b11 39l5 39t10
+8r4 Sock{18|47R9} 19r15 30r38
+11t9 Send_Packets 13b14 25l8 25t20
+14a7 Message{string} 18r36 19r21
+16i11 I{integer}
+22r12 E{5|62R9} 24r43
+33r9 E{5|62R9} 35r40
+X 17 sockets.ads
+42K9*Sockets 16|4r6 4r29 4r38 17|254e12
+172U14*Put 16|19s10
+184V13*Get{string} 16|30s33
+X 18 sockets-multicast.ads
+41K17*Multicast 16|4w14 4r46 18|93e22
+47R9*Multicast_Socket_FD<17|44R9> 16|8r20 18|87e14
+51V13*Create_Multicast_Socket{47R9} 16|9s6
+X 38 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+
