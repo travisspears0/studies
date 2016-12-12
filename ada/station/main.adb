@@ -9,9 +9,11 @@ use Ada.Command_Line, Ada.Exceptions, Ada.Text_IO, Ada.Strings.Unbounded, Socket
 --								if it's free it passes 0 if it's taken it passess the id in ssss e.g.
 --						s 1:45 2:3 3:101 4:8 5:0
 --						s 1:0 2:2016 3:0
---			[t nn ssss] - sent when a slot has been taken by the driver with id ssss e.g. t 04 1, t 01 126
+--			[t nn ssss] - sent when a slot nn has been taken by the driver with id ssss e.g. t 4 1, t 1 126
+--			[f nn] - sent when slot nn has been freed
+--			[nt] - sent to single user when they failed to take a slot
 --		CLIENT
---			[t nn] - trying to take slot for nn time(minutes in real life, seconds for tests) e.g. t 05, t 20
+--			[p] - trying to park for
 --			[l] - leaving station
 
 procedure main is
@@ -20,7 +22,9 @@ procedure main is
 	subtype id_string is string(1..4);
 
 	--variables and constants
-	slots: constant integer := 5;
+	slots: constant integer := 2;
+	--the server will be logging state on the console every second or not
+	log: constant boolean := true;
 	taken_ids: array(1..9999) of boolean := (others => false);
 
 	package st is new station(slots);
@@ -71,21 +75,34 @@ procedure main is
 		if(id = -1) then raise connection_closed; end if;
 		taken_ids(id) := true;
 		put_line(sock, "id" & id'img);
+		put_line("new user" & id'img);
 		--sending state
-		put_line(sock, to_string(st.print_state));
+		put_line(sock, to_string(st.get_state));
 
 		loop
 			declare
 				Input : String := Get_Line (Sock);
-				time: integer := 0;
+				--time: integer := 0;
+				slot_taken: integer;
 			begin
-				if input(1) = 't' then
+				if input(1) = 'p' then
 					--user tries to take a slot
-					time := integer'value((1=>input(3)))*10+integer'value((1=>input(4)));
-					put_line(id'img & " trying to take slot for period of " & time'img);
+					--time := integer'value((1=>input(3)))*10+integer'value((1=>input(4)));
+					--put_line(id'img & " trying to take slot for period of " & time'img);
+					slot_taken := st.take_slot(id);
+					if(slot_taken /= -1) then
+						write("t" & slot_taken'img & id'img);
+						put_line(id'img & " parked on slot " & slot_taken'img);
+					else
+						put_line(sock, "nt");
+						put_line(id'img & " failed to park");
+					end if;
 				elsif input(1) = 'l' then
 					--user is leaving the station
-					put_line(id'img & " leaving station");
+					if(st.leave(id) = true) then
+						write(to_string(st.get_state));
+						put_line(id'img & " leaving station");
+					end if;
 				else
 					put_line("unknown command " & input);
 				end if;
@@ -97,6 +114,11 @@ procedure main is
 				Shutdown (Sock, Both);
 				All_Clients.Delete (Sock_ID);
 				if(id /= -1) then taken_ids(id) := false; end if;
+                                if(st.leave(id) = true) then
+                                	write(to_string(st.get_state));
+                                	put_line(id'img & " leaving station");
+                                end if;
+				put_line("user" & id'img & " left");
 	end Client_Task;
  
 	Accepting_Socket : Socket_FD;
@@ -104,18 +126,35 @@ procedure main is
  
 	type Client_Access is access Client_Task;
 	Dummy : Client_Access;
+
+	port: constant positive := 2703;
+
+	task type print_state;
+	task body print_state is
+		i:float:=0.001;
 	begin
-		if Argument_Count /= 1 then
-			Raise_Exception (Constraint_Error'Identity,
-			"Usage: " & Command_Name & " port");
-		end if;
+		loop
+			put_line(to_string(st.get_state));
+			delay 1.0;
+			i := i+0.001;
+		end loop;
+	end print_state;
+
+	type print_state_access is access all print_state;
+	ps : print_state_access;
+
+	begin
 		Socket (Accepting_Socket, PF_INET, SOCK_STREAM);
 		setsockopt (Accepting_Socket, SOL_SOCKET, SO_REUSEADDR, 1);
-		Bind (Accepting_Socket, Positive'Value (Argument (1)));
+		Bind (Accepting_Socket, port);
 		listen (Accepting_Socket);
+
+		if(log = true) then
+			ps := new print_state;
+		end if;
+
 		loop
 			Accept_Socket (Accepting_Socket, Incoming_Socket);
-
 			dummy := new Client_Task;
 		Dummy.Start (Incoming_Socket);
 		end loop;

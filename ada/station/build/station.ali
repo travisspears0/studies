@@ -2,30 +2,24 @@ V "GNAT Lib v4.9"
 P SS ZX
 
 RN
-RV NO_ALLOCATORS
-RV NO_ANONYMOUS_ALLOCATORS
-RV NO_COEXTENSIONS
 RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_IO
-RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
-RV NO_TASK_ALLOCATORS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
-RV MAX_TASKS=1+
 
-U station%b		station.adb		ef37bbef NE OO PK GE IL
+U station%b		station.adb		b17e4ae1 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U station%s		station.ads		9d6bd83d BN EE NE OO PK GE IL
+U station%s		station.ads		3b95f6e7 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -45,8 +39,8 @@ D a-textio.ads		20140129155348 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20140225151838 69adb1b9
 D i-cstrea.ads		20130412125801 8128536b
-D station.ads		20161211200617 a2fa0cf8
-D station.adb		20161211200608 4a319606
+D station.ads		20161212153543 04042222
+D station.adb		20161212160113 b28649d2
 D system.ads		20160213141829 90249111
 D s-atocou.ads		20131010110730 cd7c94ca
 D s-atocou.adb		20131010121735 62bad392
@@ -75,27 +69,30 @@ X 8 a-string.ads
 16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
 X 10 a-strunb.ads
 76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
-79R9*Unbounded_String<5|48R9> 473e14 16|10r37 17|35r37 36r25
-94V13*To_Unbounded_String{79R9} 17|38s27 41s52 43s52
-119V14*"&"{79R9} 17|41s50 43s50
+79R9*Unbounded_String<5|48R9> 473e14 16|11r35 17|50r35 51r25
+94V13*To_Unbounded_String{79R9} 17|53s27 55s44
+119V14*"&"{79R9} 17|55s42
 X 12 a-textio.ads
 49K13*Text_IO 471e16 17|1w10 2r9
-263U14*Put_Line 17|12s17 16s17 28s25 31s25
+263U14*Put_Line 17|12s17 16s17
 X 16 station.ads
-5i9 places{positive} 17|6r30 39r29 51r29
-6k9*station 5z9 11l5 11e12 17|4b14 57l5 57t12
-7U19*take_slot 7>29 7>45 17|22b19 33l13 33t22
-7o29 time{duration} 17|22b29 28r77 29r71
-7i45 id{positive} 17|22b45 28r101 29r116
-9V18*get_free_slot{integer} 17|26s30 49b18 55l13 55t26
-10V18*print_state{10|79R9} 17|35b18 47t12
+5i9 places{positive} 17|6r30 54r29 62r29 65r29
+6k9*station 5z9 12l5 12e12 17|4b14 71l5 71t12
+8V18*leave{boolean} 8>24 17|21b18 30t12
+8i24 id{integer} 17|21b24 24r44
+9V18*take_slot{integer} 9>28 17|34b18 48l13 48t22
+9i28 id{positive} 17|34b28 38r44 42r50
+10V18*get_free_slot{integer} 10>32 17|38s30 60b18 69l13 69t26
+10i32 id{integer} 17|60b32 63r44
+11V18*get_state{10|79R9} 17|50b18 58t12
 X 17 station.adb
-6a9 state_pool(integer) 13m17 15m17 40r28 41r86 52r28
-8T19 wait_task_type 8d34 8d56 8d78 10b19 17t12 19r46 29r42
-19P14 wait_task_pointer(8T19) 24r29
-23i17 free_slot{integer} 26m17 27r20 28r51 29r90
-24p17 wait_task{19P14} 29m25
-36r17 result{10|79R9} 38m17 41m33 41r43 43m33 43r43 46r24
-39i21 i{integer} 40r39 41r72 41r97 43r72
-51i21 i{integer} 52r39 52r58
+6a9 state_pool(integer) 13m17 15m17 23r26 24r28 25m33 42m25 55r64 63r28 66r28
+8T19 wait_task_type 8d34 8d56 8d78 10b19 17t12 19r46
+19P14 wait_task_pointer(8T19)
+23i21 i{integer} 24r39 25r44
+35i17 free_slot{integer} 38m17 39r20 42r36 43r32
+51r17 result{10|79R9} 53m17 55m25 55r35 57r24
+54i21 i{integer} 55r75
+62i21 i{integer} 63r39
+65i21 i{integer} 66r39 66r58
 
