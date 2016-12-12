@@ -24,7 +24,7 @@ procedure main is
 	--variables and constants
 	slots: constant integer := 2;
 	--the server will be logging state on the console every second or not
-	log: constant boolean := true;
+	log: constant boolean := false;
 	taken_ids: array(1..9999) of boolean := (others => false);
 
 	package st is new station(slots);

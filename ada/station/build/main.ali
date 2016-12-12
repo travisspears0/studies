@@ -38,7 +38,7 @@ RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U main%b		main.adb		07c217f3 NE OO SU IL
+U main%b		main.adb		9e77998d NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
@@ -102,7 +102,7 @@ D a-uncdea.ads		20070406091342 f15a5ed1
 D interfac.ads		20140225151838 69adb1b9
 D i-c.ads		20110801143639 5421119b
 D i-cstrea.ads		20130412125801 8128536b
-D main.adb		20161212155615 dbfe9f30
+D main.adb		20161212171051 424b114e
 D sockets.ads		20161211155127 c7635c3a
 D station.ads		20161212153543 04042222
 D station.adb		20161212160113 b28649d2
