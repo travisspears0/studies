@@ -1,0 +1,7 @@
+Nr zadania      Plik skryptu        Plik modelu
+1)              script1.m           lab4_model.slx
+    Wykres odpowiedzi układu o podaej transmitancji to sinusoida z ostrymi zakończeniami na szczytach
+    i w dolinach. Im większe dobierzemy s, tym wykres jest gęstszy, amplituda nie zmienia się znacząco.
+1)              script2.m           lab4_model_2.slx
+    Według krytermiu Nyquista obydwa systemy są asymptotycznie stabilne, ponieważ ich wykresy po domknięciu nie
+    obejmują punktu (-1,0).

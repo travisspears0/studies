@@ -2,29 +2,19 @@
 clearvars;
 close all;
 clc;
-%
-sim('lab4_model_3');
-figure;
-subplot(1,2,1), plot(x1);
-%parametry wykresu
-grid on;
-xlabel('t');
-ylabel('x(t)');
-subplot(1,2,2), plot(x2);
-%parametry wykresu
-grid on;
-xlabel('t');
-ylabel('x(t)');
-%tytul wykresu
-title('...');
+%filtry
+dp = tf([1],[4 1]);
+gp = tf([.4],[.4 1]);
+pp = tf([1],[1 2 1]);
+dr = tf([1],[1 .1 1]);
 
+%wykresy charakterystyk bodego
 figure;
 hold on;
-u1 = tf([1],[1 1 2]);
-u2 = tf([1],[1 -.1 1]);
-nyquist(u1,'r');
-nyquist(u2,'g');
-plot(-1, 0); % wykresy beda stabilne bo nie obejmuja punktu (-1,0) -> kryterium Nyquista!
+bode(dp,'r');
+bode(gp,'g');
+bode(pp,'b');
+bode(dr,'y');
 
 hold off;
 %parametry wykresu
@@ -32,5 +22,13 @@ grid on;%nie ma siatki, czemu ??
 xlabel('t');
 ylabel('x(t)');
 %tytul wykresu
-title('...');
+title('charakterystki bodego');
+
+
+
+
+
+
+
+
 

@@ -6,7 +6,7 @@ clc;
 figure;
 n=3;
 for i=1:n
-    s=i;
+    s=i*10;
     sim('lab4_model');
     subplot(1,n,i), plot(simout);
     %tytul wykresu
