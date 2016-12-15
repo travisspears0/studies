@@ -3,6 +3,14 @@ use ada.text_io, Ada.Strings.Unbounded;
 
 package body station is
 
+	protected body p is
+                procedure e is begin
+                        put("e");
+                end e;
+        end p;
+
+
+	taken_ids: array(1..9999) of boolean := (others => false);	
 	state_pool: array(1..places) of integer := (others => 0);
 
 	task type wait_task_type(time: access duration;slot: access integer; id: access positive);
@@ -29,6 +37,20 @@ package body station is
 		return false;
         end;
 
+	function take_id return integer is
+        begin
+                for i in taken_ids'range loop
+                        if taken_ids(i) = false then return i; end if;
+                end loop;
+                return -1;
+        end take_id;
+
+	procedure free_id(id: integer) is
+	begin
+		if id /= -1 then
+			taken_ids(id) := false;
+		end if;
+	end free_id;
 
 	--returns number of slot taken or -1 if there are no free slots
 	function take_slot(id: positive) return integer is

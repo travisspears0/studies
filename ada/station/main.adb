@@ -25,18 +25,14 @@ procedure main is
 	slots: constant integer := 2;
 	--the server will be logging state on the console every second or not
 	log: constant boolean := false;
-	taken_ids: array(1..9999) of boolean := (others => false);				--atomic
+	--taken_ids: array(1..9999) of boolean := (others => false);				--atomic
+
+	procedure flushscreen is
+        begin
+                put(ascii.esc & "[2J" & ascii.esc & "[0;0H" & ascii.esc & "[0m");
+        end flushscreen;
 
 	package st is new station(slots);
-
-	--returns first available uniqe id
-	function get_id return integer is
-	begin
-		for i in taken_ids'range loop
-			if taken_ids(i) = false then return i; end if;
-		end loop;
-		return -1;
-	end get_id;
 
 	package Client_Vectors is new Ada.Containers.Vectors
 		(Element_Type => Socket_FD, Index_Type => Positive);
@@ -71,9 +67,8 @@ procedure main is
 
 		All_Clients.Append (Sock);
 		Sock_ID := All_Clients.Find_Index (Sock);
-		id := get_id;
+		id := st.take_id;
 		if(id = -1) then raise connection_closed; end if;
-		taken_ids(id) := true;
 		put_line(sock, "id" & id'img);
 		put_line("new user" & id'img);
 		--sending state
@@ -82,13 +77,10 @@ procedure main is
 		loop
 			declare
 				Input : String := Get_Line (Sock);
-				--time: integer := 0;
 				slot_taken: integer;
 			begin
 				if input(1) = 'p' then
 					--user tries to take a slot
-					--time := integer'value((1=>input(3)))*10+integer'value((1=>input(4)));
-					--put_line(id'img & " trying to take slot for period of " & time'img);
 					slot_taken := st.take_slot(id);
 					if(slot_taken /= -1) then
 						write("t" & slot_taken'img & id'img);
@@ -106,14 +98,13 @@ procedure main is
 				else
 					put_line("unknown command " & input);
 				end if;
-				--Write (Input);
 			end;
 		end loop;
 		exception
 			when Connection_Closed =>
 				Shutdown (Sock, Both);
 				All_Clients.Delete (Sock_ID);
-				if(id /= -1) then taken_ids(id) := false; end if;
+				st.free_id(id);
                                 if(st.leave(id) = true) then
                                 	write(to_string(st.get_state));
                                 	put_line(id'img & " leaving station");
@@ -143,19 +134,33 @@ procedure main is
 	type print_state_access is access all print_state;
 	ps : print_state_access;
 
+	task type server_task;
+	task body server_task is
 	begin
 		Socket (Accepting_Socket, PF_INET, SOCK_STREAM);
-		setsockopt (Accepting_Socket, SOL_SOCKET, SO_REUSEADDR, 1);
-		Bind (Accepting_Socket, port);
-		listen (Accepting_Socket);						--do osobnego zadania i z klawiatury abort
+                setsockopt (Accepting_Socket, SOL_SOCKET, SO_REUSEADDR, 1);
+                Bind (Accepting_Socket, port);
+                listen (Accepting_Socket);
 
+		loop
+                        Accept_Socket (Accepting_Socket, Incoming_Socket);
+                        dummy := new Client_Task;
+                Dummy.Start (Incoming_Socket);
+                end loop;
+	end server_task;
+
+	option: character := ' ';
+	srvt: server_task;
+
+	begin
 		if(log = true) then
 			ps := new print_state;
 		end if;
-
-		loop
-			Accept_Socket (Accepting_Socket, Incoming_Socket);
-			dummy := new Client_Task;
-		Dummy.Start (Incoming_Socket);
+		while option /= 'q' loop
+			flushscreen;
+			put_line("commands");
+			put_line("[q] - quit");
+			get(option);
 		end loop;
+		abort srvt;
 end main;
