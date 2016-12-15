@@ -3,7 +3,8 @@ use ada.Strings.Unbounded;
 
 generic
 	places: positive;
-package station is
+package station is 
+										--protected
 
 	function leave(id: integer) return boolean;
 	function take_slot(id: positive) return integer;

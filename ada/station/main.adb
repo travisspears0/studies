@@ -25,7 +25,7 @@ procedure main is
 	slots: constant integer := 2;
 	--the server will be logging state on the console every second or not
 	log: constant boolean := false;
-	taken_ids: array(1..9999) of boolean := (others => false);
+	taken_ids: array(1..9999) of boolean := (others => false);				--atomic
 
 	package st is new station(slots);
 
@@ -147,7 +147,7 @@ procedure main is
 		Socket (Accepting_Socket, PF_INET, SOCK_STREAM);
 		setsockopt (Accepting_Socket, SOL_SOCKET, SO_REUSEADDR, 1);
 		Bind (Accepting_Socket, port);
-		listen (Accepting_Socket);
+		listen (Accepting_Socket);						--do osobnego zadania i z klawiatury abort
 
 		if(log = true) then
 			ps := new print_state;

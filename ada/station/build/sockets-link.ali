@@ -1,4 +1,4 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v5"
 P SS ZX
 
 RN
@@ -6,27 +6,26 @@ RN
 U sockets.link%s	sockets-link.ads	4716ae54 NE OO PK
 W sockets%s		sockets.adb		sockets.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-except.ads		20140129161953 f86a4103
-D a-stream.ads		20140122164720 1a984740
-D a-tags.ads		20111212115430 6c0509d0
-D a-unccon.ads		20070406091342 f9eb8f06
-D interfac.ads		20140225151838 69adb1b9
-D i-c.ads		20110801143639 5421119b
-D sockets.ads		20161211155127 c7635c3a
-D sockets-link.ads	20161211155127 8075f26e
-D system.ads		20160213141829 90249111
-D s-exctab.ads		20140225151139 54135002
-D s-parame.ads		20140225151139 ab8cb46a
-D s-secsta.ads		20140225151139 86a2856d
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-stratt.ads		20131014135145 aedef97e
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D sockets.ads		20161212171710 c7635c3a sockets%s
+D sockets-link.ads	20161212171710 8075f26e sockets.link%s
+D system.ads		20141031112219 1d274481 system%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
 X 8 sockets.ads
 42K9*Sockets 254e12 9|42r17 48r5
 X 9 sockets-link.ads
