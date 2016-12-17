@@ -1,0 +1,9 @@
+Wnioski po laboratoriach dotycz¹cych
+linearyzacji uk³adów nielinowych.
+
+Zadany system nieliniowy mial dwa punkty rownowagi, a mianowicie: [0, 0] oraz [0, -2/3]. 
+Wykres przedstawia system nielinowy (magenta), oraz linearyzacje dla punktu [0,0] (niebieski) i
+punktu [0, -2/3] (zielony).
+
+Linearyzacja w punkcie [0, 0] przybliza zadany system niemal idealnie, podczas gdy 
+linearyzacja w punkcie [0, -2/3] radzi sobie z tym zadaniem dosc slabo.

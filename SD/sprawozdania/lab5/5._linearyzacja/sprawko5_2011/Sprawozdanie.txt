@@ -1,0 +1,15 @@
+Na laboratoriach mielismy zbadac i zilustrowac wykresami  w dzidzinie czasu i portretami fazowymi i stabilnosci punktów równowagi
+
+Wplyw zostal pokazany na przebiegu funkcji w pkt2.m 
+powoduje on wieksza/szybsza stabilnosc dla przedzialow x(t) po przeciwnej stronie osi Ox.
+
+
+Jezeli warunek jest spelniony to trajektorie fazowe systemu nieliniowego w penym otoczeniu punkow rownowagi zachowuja sie podobnie jak trajektorie ukladu zlinearyzowanego w tym punkcie w otoczeniu zera co widac na pkt3.m
+
+w pkt4.m zostaly umieszczone portrety fazowe sysstemu nieliniowego i jego linearyzacji w obydwu punktach rownowagi
+pierwszy wykres:
+	system niezlinearyzowany
+drugi wykres:
+	zlinearyzowany w zerowym pkt rownowagi 
+trzeci wykres:
+	zlinearyzowany w pkt [-2/3;0] rownowagi 

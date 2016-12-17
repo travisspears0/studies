@@ -25,7 +25,6 @@ procedure main is
 	slots: constant integer := 2;
 	--the server will be logging state on the console every second or not
 	log: constant boolean := false;
-	--taken_ids: array(1..9999) of boolean := (others => false);				--atomic
 
 	procedure flushscreen is
         begin
@@ -37,7 +36,7 @@ procedure main is
 	package Client_Vectors is new Ada.Containers.Vectors
 		(Element_Type => Socket_FD, Index_Type => Positive);
 	All_Clients : Client_Vectors.Vector;
- 
+	--------------------------------------------------------------------------------
 	procedure Write (S : String) is
 		procedure Output (Position : Client_Vectors.Cursor) is
 			Sock : Socket_FD := Client_Vectors.Element (Position);
@@ -47,7 +46,7 @@ procedure main is
 	begin
 		All_Clients.Iterate (Output'Access);
 	end Write;
-
+	--------------------------------------------------------------------------------
 	task type Client_Task is
 		entry Start (FD : Socket_FD);
 	end Client_Task;
@@ -56,6 +55,8 @@ procedure main is
 		Sock    : Socket_FD;
 		Sock_ID : Positive;
 		id: integer;
+		b: boolean;
+		state: unbounded_string;
 	begin
 		select
 			accept Start (FD : Socket_FD) do
@@ -67,12 +68,13 @@ procedure main is
 
 		All_Clients.Append (Sock);
 		Sock_ID := All_Clients.Find_Index (Sock);
-		id := st.take_id;
+		st.client.take_id(id);
 		if(id = -1) then raise connection_closed; end if;
 		put_line(sock, "id" & id'img);
 		put_line("new user" & id'img);
 		--sending state
-		put_line(sock, to_string(st.get_state));
+		st.client.get_state(state);
+		put_line(sock, to_string(state));
 
 		loop
 			declare
@@ -81,7 +83,7 @@ procedure main is
 			begin
 				if input(1) = 'p' then
 					--user tries to take a slot
-					slot_taken := st.take_slot(id);
+					st.client.take_slot(id,slot_taken);
 					if(slot_taken /= -1) then
 						write("t" & slot_taken'img & id'img);
 						put_line(id'img & " parked on slot " & slot_taken'img);
@@ -91,8 +93,10 @@ procedure main is
 					end if;
 				elsif input(1) = 'l' then
 					--user is leaving the station
-					if(st.leave(id) = true) then
-						write(to_string(st.get_state));
+					st.client.leave(id,b);
+					if(b = true) then
+						st.client.get_state(state);
+						write(to_string(state));
 						put_line(id'img & " leaving station");
 					end if;
 				else
@@ -104,14 +108,16 @@ procedure main is
 			when Connection_Closed =>
 				Shutdown (Sock, Both);
 				All_Clients.Delete (Sock_ID);
-				st.free_id(id);
-                                if(st.leave(id) = true) then
-                                	write(to_string(st.get_state));
+				st.client.free_id(id);
+				st.client.leave(id,b);
+                                if(b = true) then
+					st.client.get_state(state);
+                                	write(to_string(state));
                                 	put_line(id'img & " leaving station");
                                 end if;
 				put_line("user" & id'img & " left");
 	end Client_Task;
- 
+	--------------------------------------------------------------------------------
 	Accepting_Socket : Socket_FD;
 	Incoming_Socket  : Socket_FD;
  
@@ -123,9 +129,11 @@ procedure main is
 	task type print_state;
 	task body print_state is
 		i:float:=0.001;
+		state: unbounded_string;
 	begin
 		loop
-			put_line(to_string(st.get_state));
+			st.client.get_state(state);
+			put_line(to_string(state));
 			delay 1.0;
 			i := i+0.001;
 		end loop;
@@ -133,7 +141,22 @@ procedure main is
 
 	type print_state_access is access all print_state;
 	ps : print_state_access;
+	--------------------------------------------------------------------------------
+	package client_tasks is new Ada.Containers.Vectors
+		(Element_Type => Client_Access, Index_Type => Positive);
+	all_client_tasks : client_tasks.vector;
 
+	procedure close_all_clients is
+		procedure close (Position : client_tasks.Cursor) is
+			--Sock : Socket_FD := Client_Vectors.Element (Position);
+			ct: client_access := client_tasks.element(position);
+		begin
+			abort ct.all;
+		end close;
+	begin
+		all_client_tasks.Iterate (close'Access);
+	end close_all_clients;
+	--------------------------------------------------------------------------------
 	task type server_task;
 	task body server_task is
 	begin
@@ -145,22 +168,27 @@ procedure main is
 		loop
                         Accept_Socket (Accepting_Socket, Incoming_Socket);
                         dummy := new Client_Task;
-                Dummy.Start (Incoming_Socket);
+			all_client_tasks.append(dummy);
+                	Dummy.Start (Incoming_Socket);
                 end loop;
 	end server_task;
 
+	--------------------------------------------------------------------------------
 	option: character := ' ';
 	srvt: server_task;
 
+	--------------------------------------------------------------------------------
 	begin
 		if(log = true) then
 			ps := new print_state;
 		end if;
 		while option /= 'q' loop
-			flushscreen;
+			--flushscreen;
 			put_line("commands");
 			put_line("[q] - quit");
 			get(option);
 		end loop;
 		abort srvt;
+		close_all_clients;
+		put_line("station closed");
 end main;

@@ -3,17 +3,21 @@ use ada.Strings.Unbounded;
 
 generic
 	places: positive;
-package station is 
-										--protected
+package station is
 
-	protected p is
-		procedure e;
-	end p;
+	type taken_ids_t is array(1..9999) of boolean;
+	type state_pool_t is array(1..places) of integer;
 
-	function take_id return integer;
-	procedure free_id(id: integer);
-	function leave(id: integer) return boolean;
-	function take_slot(id: positive) return integer;
-	function get_free_slot(id: integer) return integer;
-	function get_state return unbounded_string;
+	protected client is--funkcje przerobic na procedury...
+		procedure take_id(id: out integer);
+		procedure free_id(id: integer);
+		procedure leave(id: integer; success: out boolean);
+		procedure take_slot(id: positive; free_slot: out integer);
+		procedure get_state(state: out unbounded_string);
+	private
+		procedure get_free_slot(id: integer; free_slot: out integer);
+		i :integer := 4;
+		taken_ids: taken_ids_t := (others => false);	
+		state_pool: state_pool_t := (others => 0);
+	end client;
 end station;

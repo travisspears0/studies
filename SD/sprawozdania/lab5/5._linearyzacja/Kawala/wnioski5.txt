@@ -1,0 +1,26 @@
+1.
+Z wykresów mo¿na zaobserwowaæ:
+
+W przyk³adzie 1.
+xr=0 jest lokalnie as. stab. punkt xr=1/e e tym przypadku 5 jest niestabilny
+
+W przyk³adzie 2.
+xr=[0;0] jest lokalnie as. stab. trajektorie z prawej strony zbiegaj¹ do niego
+
+W przyk³adzie 3.
+xr=[0;0] jest lokalnie as. stab. co widaæ z rysunku
+ punkt xr=[-2/3;0] jest niestabilny
+
+2. im mniejsze eps tym bardziej wykresy s¹ podobne, dla eps=0 system jest liniowy.
+Im wiêksze eps tym system jest bardziej  nieliniowy wiêc trudniej go przybli¿aæ przez linearyzacje
+
+3.Co to hiperbolicznoœæ?
+
+4.
+det(jwI-[0,1;-2,-1])=-2
+det(jwI-[0,1;2,-1])=-2+4jw
+oba wyznaczniki s¹ ró¿ne od 0 wiêc linearyzacje s¹ podobne do oryginalnego wykresu
+
+
+
+

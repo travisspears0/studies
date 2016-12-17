@@ -1,17 +1,18 @@
-#Sun Dec 11 14:38:26 CET 2016
+#Thu Dec 15 13:54:49 CET 2016
 rulergrid.gridlinestyle=6
 print.margin.bottom=0.5
 print.margin.top=0.5
 print.page.height=11.0
 print.usePortrait=true
-rulergrid.gridlinecolor=3289650
+viewport.y=6
 print.margin.left=0.5
+rulergrid.gridlinecolor=3289650
 rulergrid.gridspacing=20.0
-rulergrid.rulerunit=2
 print.margin.right=0.5
+rulergrid.rulerunit=2
 rulergrid.snaptogrid=false
-rulergrid.gridlevel=false
 print.page.size=Letter
+rulergrid.gridlevel=false
 print.useInches=true
-print.page.width=8.5
 zoom=0.75
+print.page.width=8.5

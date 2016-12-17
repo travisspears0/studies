@@ -1,0 +1,29 @@
+###### Zadanie 1 ######
+Funkcja 1:
+System posiada dwa punkty równowagi.
+Punkt równowagi xr=0 lokalnie asymptotycznie stabilny.
+Punkt równowagi xr=1/epsilon=1 niestabilny
+
+Funkcja 2:
+System posiada jeden punkt równowagi xr=[0 0]
+Punkt równowagi lokalnie asymptotycznie stabilny 
+
+Funkcja 3:
+System posiada dwa punkty równowagi.
+Punkt równowagi xr=[0 0] lokalnie asymptotycznie stabilny.
+Punkt równowagi xr=[-2/3 0] niestabilny, nie posiada obszaru atrakcji
+
+###### Zadanie 2 ######
+Dla epsilon = 0 badany system jest liniowy.
+Zwiêkszaj¹c epsilon wykresy s¹ coraz mniej podobne, poniewa¿ system jest bardziej nieliniowy.
+Z wykresu widaæ równie¿ ¿e obszar atrakcji jest ograniczony przez drugi punkt równowagi.
+
+###### Zadanie 3 ######
+Weryfikacja wp³ywu braku hiperbolicznoœci
+Punkt równowagi nazywa siê punktem hiperbolicznym, jeœli czêœci rzeczywiste wszystkich wartoœci w³asnych macierzy linearyzacji pola w tym punkcie s¹ niezerowe.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!????
+
+###### Zadanie 4 ######
+det(jwI-[0,1;-2,-1])=-2 jest ró¿ny od 0
+det(jwI-[0,1;2,-1])=-2+4jw jest ró¿ny od 0
+Trajektorie systemu zlinearyzowanego przypominaj¹ orginalne.

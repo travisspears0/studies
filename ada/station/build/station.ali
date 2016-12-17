@@ -1,105 +1,101 @@
-V "GNAT Lib v5"
+V "GNAT Lib v4.9"
 P SS ZX
 
 RN
-RV NO_DELAY
-RV NO_FIXED_POINT
 RV NO_IO
-RV NO_NESTED_FINALIZATION
 RV NO_PROTECTED_TYPES
-RV NO_RELATIVE_DELAY
-RV NO_STANDARD_STORAGE_POOLS
-RV NO_TASKING
-RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
 
-U station%b		station.adb		ab769559 NE OO PK GE IL
+U station%b		station.adb		1f545efb NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U station%s		station.ads		48f3a578 BN EE NE OO PK GE IL
+U station%s		station.ads		9e811189 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 
-D ada.ads		20070406091342 3ffc8e18 ada%s
-D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
-D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
-D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
-D a-finali.ads		20140611123707 69f99942 ada.finalization%s
-D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
-D a-string.ads		20070406091342 90ac6797 ada.strings%s
-D a-strmap.ads		20140611123156 e8bb714a ada.strings.maps%s
-D a-strunb.ads		20140717072738 3f91d4c5 ada.strings.unbounded%s
-D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
-D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
-D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
-D interfac.ads		20141120112812 6033a23f interfaces%s
-D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D station.ads		20161215154600 776271bd station%s
-D station.adb		20161215154612 dbe8c5f5 station%b
-D system.ads		20141031112219 1d274481 system%s
-D s-atocou.ads		20141017084241 cd7c94ca system.atomic_counters%s
-D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
-D s-exctab.ads		20140225151139 54135002 system.exception_table%s
-D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
-D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
-D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
-D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
-D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
-D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
-D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
-D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
-D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
-D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
-D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
-D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
-D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
-D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20140225151544 66457d31
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20120426100351 3f91d4c5
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D station.ads		20161217105717 a110c54c
+D station.adb		20161217131223 b9b8baa6
+D system.ads		20160213141829 90249111
+D s-atocou.ads		20131010110730 cd7c94ca
+D s-atocou.adb		20131010121735 62bad392
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stposu.ads		20121005142121 ffeba1c5
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
 X 1 ada.ads
 16K9*Ada 19e8 16|1r6 2r5 17|1r6 1r19 2r5 2r18
 X 8 a-string.ads
 16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
 X 10 a-strunb.ads
 76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
-79R9*Unbounded_String<5|43R9> 473e14 16|18r35 17|72r35 73r25
-94V13*To_Unbounded_String{79R9} 17|75s27 77s44
-119V14*"&"{79R9} 17|77s42
+79R9*Unbounded_String<5|48R9> 473e14 16|16r48 17|47r48
+94V13*To_Unbounded_String{79R9} 17|49s34 51s50
+119V14*"&"{79R9} 17|51s48
 X 12 a-textio.ads
 49K13*Text_IO 471e16 17|1w10 2r9
-242U14*Put 17|8s25
-263U14*Put_Line 17|20s17 24s17
 X 16 station.ads
-5i9 places{positive} 17|14r30 76r29 84r29 87r29
-6k9*station 5z9 19l5 19e12 17|4b14 93l5 93t12
-9w19*p 17|6b24 10l13 10t14
-10U27 e 17|7b27 9l21 9t22
-13V18*take_id{integer} 17|40b18 46l13 46t20
-14U19*free_id 14>27 17|48b19 53l13 53t20
-14i27 id{integer} 17|48b27 50r20 51r35
-15V18*leave{boolean} 15>24 17|29b18 38t12
-15i24 id{integer} 17|29b24 32r44
-16V18*take_slot{integer} 16>28 17|56b18 70l13 70t22
-16i28 id{positive} 17|56b28 60r44 64r50
-17V18*get_free_slot{integer} 17>32 17|60s30 82b18 91l13 91t26
-17i32 id{integer} 17|82b32 85r44
-18V18*get_state{10|79R9} 17|72b18 80t12
+5i9 places{positive} 9r39 17|50r37 58r37 62r45
+6k9*station 5z9 23l5 23e12 17|4b14 70l5 70t12
+8A14*taken_ids_t(boolean)<integer> 20r28
+9A14*state_pool_t(integer)<integer> 21r29
+11w19*client 17|6b24 68l13 68t19
+12U27 take_id 12<35 17|7b27 17l21 17t28
+12i35 id{integer} 17|7b35 9m25 12m41
+13U27 free_id 13>35 17|31b27 36l21 36t28
+13i35 id{integer} 17|31b35 33r28 34r43
+14U27 leave 14>33 14<46 17|19b27 29t20
+14i33 id{integer} 17|19b33 23r52
+14b46 success{boolean} 17|19b45 21m25 25m41
+15U27 take_slot 15>37 15<51 17|39b27 45l21 45t30
+15i37 id{positive} 17|39b37 41r39 43r58
+15i51 free_slot{integer} 17|39b51 41m42 42r28 43r44
+16U27 get_state 16<37 17|47b27 53t20
+16r37 state{10|79R9} 17|47b37 49m25 51m33 51r42
+18U27 get_free_slot 18>41 18<54 17|41s25 55b27 66l21 66t34
+18i41 id{integer} 17|55b41 59r52
+18i54 free_slot{integer} 17|55b54 57m25 59m60 61r28 63m67
+19i17 i{integer}
+20a17 taken_ids{8A14} 17|10r34 11r36 13m41 34m33
+21a17 state_pool{9A14} 17|22r34 23r36 24m41 43m33 51r70 59r36 63r44
 X 17 station.adb
-13a9 taken_ids(boolean) 42r26 43r28 51m25
-14a9 state_pool(integer) 21m17 23m17 31r26 32r28 33m33 64m25 77r64 85r28
-. 88r28
-16T19 wait_task_type 16d34 16d56 16d78 18b19 25t12 27r46
-27P14 wait_task_pointer(16T19)
-31i21 i{integer} 32r39 33r44
-42i21 i{integer} 43r38 43r61
-57i17 free_slot{integer} 60m17 61r20 64r36 65r32
-73r17 result{10|79R9} 75m17 77m25 77r35 79r24
-76i21 i{integer} 77r75
-84i21 i{integer} 85r39
-87i21 i{integer} 88r39 88r58
+10i29 i{integer} 11r46 12r47 13r51
+22i29 i{integer} 23r47 24r52
+50i29 i{integer} 51r81
+58i29 i{integer} 59r47
+62i37 i{integer} 63r55 63r80
 

@@ -1,4 +1,4 @@
-V "GNAT Lib v5"
+V "GNAT Lib v4.9"
 P SS ZX
 
 RN
@@ -25,7 +25,7 @@ RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U sockets.naming%b	sockets-naming.adb	7d3a69d3 OO PF PK
+U sockets.naming%b	sockets-naming.adb	d700e3b9 OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -53,7 +53,7 @@ W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U sockets.naming%s	sockets-naming.ads	92a2e030 EE OO PF PK
+U sockets.naming%s	sockets-naming.ads	a9b7a569 EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.finalization%s	a-finali.adb		a-finali.ali
@@ -70,62 +70,61 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 
-D ada.ads		20070406091342 3ffc8e18 ada%s
-D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
-D a-finali.ads		20140611123707 69f99942 ada.finalization%s
-D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
-D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
-D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
-D gnat.ads		20140801083227 fd2ad2f1 gnat%s
-D g-os_lib.ads		20090409150019 0db74523 gnat.os_lib%s
-D interfac.ads		20141120112812 6033a23f interfaces%s
-D i-c.ads		20110801143639 5421119b interfaces.c%s
-D i-cpoint.ads		20130104124955 ee8a93ec interfaces.c.pointers%s
-D i-cstrin.ads		20140611122922 341d0ddf interfaces.c.strings%s
-D sockets.ads		20161212171710 c7635c3a sockets%s
-D sockets-constants.ads	20161212171710 8e280ed6 sockets.constants%s
-D sockets-naming.ads	20161212171710 ae91aa26 sockets.naming%s
-D sockets-naming.adb	20161212171710 2687744e sockets.naming%b
-D sockets-thin.ads	20161212171710 725bfdbd sockets.thin%s
-D sockets-types.ads	20161212171710 92a98f6e sockets.types%s
-D sockets-utils.ads	20161212171710 a12bcd44 sockets.utils%s
-D system.ads		20141031112219 1d274481 system%s
-D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
-D s-conca2.ads		20140225151544 02a0d7d0 system.concat_2%s
-D s-conca3.ads		20140225151544 0b705ca5 system.concat_3%s
-D s-conca7.ads		20140225151544 fcc75b1f system.concat_7%s
-D s-exctab.ads		20140225151139 54135002 system.exception_table%s
-D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
-D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
-D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
-D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
-D s-memory.ads		20140225151139 597d6634 system.memory%s
-D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20151016122455 4bd50652 system.os_constants%s
-D s-osinte.ads		20150107101203 e9e28195 system.os_interface%s
-D s-os_lib.ads		20150220113817 5853d835 system.os_lib%s
-D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
-D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
-D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
-D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
-D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
-D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
-D s-stalib.adb		20140225151139 f2fe2716 system.standard_library%b
-D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
-D s-stoele.adb		20140801093848 ed88f8fb system.storage_elements%b
-D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
-D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
-D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
-D s-string.ads		20140225151139 8fe54fb7 system.strings%s
-D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
-D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
-D s-taskin.ads		20150106085750 339749f0 system.tasking%s
-D s-taprob.ads		20110927094500 502249e3 system.tasking.protected_objects%s
-D s-tpoben.ads		20121029113218 b641f948 system.tasking.protected_objects.entries%s
-D s-tpobop.ads		20090409150019 5f548bb3 system.tasking.protected_objects.operations%s
-D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D gnat.ads		20110801150502 fd2ad2f1
+D g-os_lib.ads		20090409150019 0db74523
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D i-cpoint.ads		20130104124955 ee8a93ec
+D i-cstrin.ads		20130104124955 341d0ddf
+D sockets.ads		20161211155127 c7635c3a
+D sockets-constants.ads	20161211155127 8e280ed6
+D sockets-naming.ads	20161211155127 ae91aa26
+D sockets-naming.adb	20161211155127 2687744e
+D sockets-thin.ads	20161211155127 725bfdbd
+D sockets-types.ads	20161211155127 92a98f6e
+D sockets-utils.ads	20161211155127 a12bcd44
+D system.ads		20160213141829 90249111
+D s-atacco.ads		20120515093410 4c36d12f
+D s-conca2.ads		20140225151544 02a0d7d0
+D s-conca3.ads		20140225151544 0b705ca5
+D s-conca7.ads		20140225151544 fcc75b1f
+D s-exctab.ads		20140225151139 54135002
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-linux.ads		20140409145429 5b2f79a5
+D s-multip.ads		20101011073009 38ac9f73
+D s-oscons.ads		20160213141902 a445b120
+D s-osinte.ads		20140409145429 59011f13
+D s-os_lib.ads		20140225151139 73b554c6
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stausa.ads		20110804134155 017a0a05
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stposu.ads		20121005142121 ffeba1c5
+D s-stratt.ads		20131014135145 aedef97e
+D s-string.ads		20140225151139 8fe54fb7
+D s-tasinf.ads		20120730151500 21316953
+D s-taspri.ads		20110927094500 15f617a8
+D s-taskin.ads		20140131154341 3f821f32
+D s-taprob.ads		20110927094500 502249e3
+D s-tpoben.ads		20121029113218 b641f948
+D s-tpobop.ads		20090409150019 5f548bb3
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
 X 1 ada.ads
 16K9*Ada 19e8 16|39r6 58r11 17|39r6 40r6 41r6 57r11 60r11 325r14 372r10 468r7
 . 507r10
@@ -133,9 +132,9 @@ X 2 a-except.ads
 53K13*Exceptions 360e19 17|39w10 372r14 468r11 507r14
 89U14*Raise_Exception 17|372s25 468s22 507s25
 X 3 a-finali.ads
-40K13*Finalization 68e21 16|39w10 58r15
-43H9*Controlled<28|40R9> 59e72 16|58r28
-46U14*Initialize<28|44p14>
+40K13*Finalization 73e21 16|39w10 58r15
+48H9*Controlled<28|40R9> 64e72 16|58r28
+51U14*Initialize<28|44p14>
 X 6 a-unccon.ads
 17+9 Source 17|325r40
 18+9 Target 17|326r40
@@ -143,7 +142,7 @@ X 6 a-unccon.ads
 X 7 a-uncdea.ads
 20u15*Unchecked_Deallocation 17|41w10 57r15 60r15
 X 10 interfac.ads
-38K9*Interfaces 178e15 17|42r6 42r38 43r6 43r38
+38K9*Interfaces 179e15 17|42r6 42r38 43r6 43r38
 X 11 i-c.ads
 18K20*C 230e17 17|42w17 42r49 43r17 43r49
 23N4*CHAR_BIT 17|333r48
@@ -157,13 +156,13 @@ X 12 i-cpoint.ads
 47P9*Pointer(13|47P9)
 54V13*Value{18|71A9} 17|412s28[18|74] 414s61[18|82]
 X 13 i-cstrin.ads
-36K22*Strings 106e25 17|43w19 43r51
+36K22*Strings 104e25 17|43w19 43r51
 39P9*char_array_access(11|79A9) 17|60r51 63r13 121r13 239r16
 47P9*chars_ptr 17|240r25 300r16 326r50 328r26 423r23 503r19
 54V13*To_Chars_Ptr{47P9} 17|240s38
 60V13*New_String{47P9} 17|300s29 503s39
 62U14*Free 17|304s7 510s7
-74V13*Value{string} 17|248s38 419s34 425s47
+72V13*Value{string} 17|248s38 419s34 425s47
 X 14 sockets.ads
 42K9*Sockets 254e12 16|40r6 42r9 132r5 17|44r6 44r38 45r6 45r38 46r6 46r38
 . 47r6 47r38 49r14 52r14 517r5
@@ -190,7 +189,7 @@ X 16 sockets-naming.ads
 51i15*H3{48I12} 17|280r20 481m15 494r43 513m15
 51i19*H4{48I12} 17|280r43 482m15 495r43 514m15
 55A9*Address_Array(50R9)<integer> 61r22
-57R9*Host_Entry<3|43R9> 3|46P14 16|57d21 57d32 62e17 66P14 66r40 67P14 67r40
+57R9*Host_Entry<3|48R9> 3|51P14 16|57d21 57d32 62e17 66P14 66r40 67P14 67r40
 . 81p13 82r13 85p13 86r13 92p13 93r13 17|67r13 105r38 141r40 297r13 310r28
 . 322r13 340r28 352r13 369r26 409r13 416r19
 57i21*N_Aliases{natural} 60r42
@@ -198,9 +197,9 @@ X 16 sockets-naming.ads
 59p10*Name{44P9} 17|109m14 109r41 145m20 371r18 375r22 419m14
 60a10*Aliases{46A9} 17|107m45 143m45 420r28 425m20
 61a10*Addresses{55A9} 17|97r38 428r23 433m20
-66U14*Adjust<3|47p14> 66=24 17|105b14 113l8 113t14
+66U14*Adjust<3|52p14> 66=24 17|105b14 113l8 113t14
 66r24 Object{57R9} 17|105b22 107m38 107r38 109m7 109r34
-67U14*Finalize<3|48p14> 67=24 17|141b14 149l8 149t16
+67U14*Finalize<3|53p14> 67=24 17|141b14 149l8 149t16
 67r24 Object{57R9} 17|141b24 143m38 143r38 145m13 145r13
 69X4*Naming_Error 17|372r42 468r39 507r42
 72V13*Image{string} 72>20 17|259b13 281l8 281t13 289s14 337s37
@@ -208,20 +207,20 @@ X 16 sockets-naming.ads
 75V13*Image{string} 75>20 17|287b13 290l8 290t13
 75r20 Add{19|45R9} 17|287b20 289r33
 78V13*Value{50R9} 78>20 17|95s17 356s26 502b13 515l8 515t13
-78a20 Add{string} 17|502b20 503r51 508r42
+78s20 Add{string} 17|502b20 503r51 508r42
 81V13*Info_Of{57R9} 81>22 17|97s17 296b13 315l8 315t15 358s17
-81a22 Name{string} 17|296b22 300r41 307r37
+81s22 Name{string} 17|296b22 300r41 307r37
 85V13*Info_Of{57R9} 85>22 17|321b13 345l8 345t15 356s17
 85r22 Addr{50R9} 17|321b22 327r51 337r44
 89V13*Is_IP_Address{boolean} 89>28 17|51b13 94s10 355s10
-89a28 Something{string} 17|51b28
+89s28 Something{string} 17|51b28
 92V13*Info_Of_Name_Or_IP{57R9} 92>33 17|351b13 360l8 360t26 369s40
-92a33 Something{string} 17|351b33 355r25 356r33 358r26
+92s33 Something{string} 17|351b33 355r25 356r33 358r26
 96V13*Address_Of{50R9} 96>25 17|90b13 99l8 99t18
-96a25 Something{string} 17|90b25 94r25 95r24 97r26
+96s25 Something{string} 17|90b25 94r25 95r24 97r26
 99V13*Host_Name{string} 17|237b13 253l8 253t17
 102V13*Name_Of{string} 102>22 17|366b13 376l8 376t15
-102a22 Something{string} 17|366b22 369r60 373r59
+102s22 Something{string} 17|366b22 369r60 373r59
 105V13*To_In_Addr{19|45R9} 105>25 17|327s39 489b13 496l8 496t18
 105r25 Addr{50R9} 17|489b25 492r38 493r38 494r38 495r38
 108V13*To_Address{50R9} 108>25 17|134s14 180s14 221s14 289s21 433s37 476b13
@@ -251,7 +250,7 @@ X 17 sockets-naming.adb
 70U14 Raise_Naming_Error 71>7 72>7 160s10 201s10 245s10 307s10 337s10 443b14
 . 470l8 470t26
 71i7 Errno{integer} 444b7 457r15 463r58
-72a7 Message{string} 445b7 469r62
+72s7 Message{string} 445b7 469r62
 75w14 Naming_Lock 302r7 306r10 312r10 331r7 336r10 342r10 382b19 402l8 402t19
 76Y13 Lock 302s19 331s19 388b13 391l11 391t15
 77U17 Unlock 306s22 312s22 336s22 342s22 397b17 400l11 400t17
@@ -333,15 +332,7 @@ X 20 sockets-utils.ads
 41K25*Utils 17|47w14 47r46 52r22 20|66e18
 54V13*Network_To_Port=56:14{11|44M9} 17|189s24 230s24
 62V13*Is_IP_Address{boolean} 17|52r28
-X 21 system.ads
-67M9*Address
-X 31 s-memory.ads
-53V13*Alloc{21|67M9} 103i<c,__gnat_malloc>22
-68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{21|67M9} 105i<c,__gnat_realloc>22
 X 40 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 42 s-stalib.adb
-93U14 Break_Start 94i<c,__gnat_break_start>22
 
