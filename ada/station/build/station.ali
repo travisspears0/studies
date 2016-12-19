@@ -3,6 +3,7 @@ P SS ZX
 
 RN
 RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_FIXED_POINT
 RV NO_IO
 RV NO_PROTECTED_TYPES
@@ -11,13 +12,13 @@ RV NO_TASKING
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
 
-U station%b		station.adb		cbe3d7a8 NE OO PK GE IL
+U station%b		station.adb		bcbea960 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U station%s		station.ads		abe06600 BN EE NE OO PK GE IL
+U station%s		station.ads		ea3cd647 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -37,8 +38,8 @@ D a-textio.ads		20140129155348 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20140225151838 69adb1b9
 D i-cstrea.ads		20130412125801 8128536b
-D station.ads		20161217134430 9471b2c5
-D station.adb		20161217135038 586e447c
+D station.ads		20161219112942 d5ad0282
+D station.adb		20161219113331 6eef8af3
 D system.ads		20160213141829 90249111
 D s-atocou.ads		20131010110730 cd7c94ca
 D s-atocou.adb		20131010121735 62bad392
@@ -67,47 +68,57 @@ X 8 a-string.ads
 16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
 X 10 a-strunb.ads
 76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
-79R9*Unbounded_String<5|48R9> 473e14 16|20r48 17|73r48
-94V13*To_Unbounded_String{79R9} 17|75s34 77s50
-119V14*"&"{79R9} 17|77s48
+79R9*Unbounded_String<5|48R9> 473e14 16|30r48 17|89r48
+94V13*To_Unbounded_String{79R9} 17|91s34 93s50
+119V14*"&"{79R9} 17|93s48
 X 12 a-textio.ads
 49K13*Text_IO 471e16 17|1w10 2r9
-263U14*Put_Line 17|10s17
+263U14*Put_Line 17|9s17
 X 16 station.ads
-5i9 places{positive} 9r39 17|76r37 84r37 88r45
-6k9*station 5z9 27l5 27e12 17|4b14 96l5 96t12
-8A14*taken_ids_t(boolean)<integer> 24r28
-9A14*state_pool_t(integer)<integer> 25r29
-10I14*hours_type<short_short_integer> 17|7r16 19r44
-11I14*minutes_type<short_short_integer> 17|6r18 17r38
-13U19*get_time 17|9b19 11l13 11t21
-15w19*client 17|32b24 94l13 94t19
-16U27 take_id 16<35 17|33b27 43l21 43t28
-16i35 id{integer} 17|33b35 35m25 38m41
-17U27 free_id 17>35 17|57b27 62l21 62t28
-17i35 id{integer} 17|57b35 59r28 60r43
-18U27 leave 18>33 18<46 17|45b27 55t20
-18i33 id{integer} 17|45b33 49r52
-18b46 success{boolean} 17|45b45 47m25 51m41
-19U27 take_slot 19>37 19<51 17|65b27 71l21 71t30
-19i37 id{positive} 17|65b37 67r39 69r58
-19i51 free_slot{integer} 17|65b51 67m42 68r28 69r44
-20U27 get_state 20<37 17|73b27 79t20
-20r37 state{10|79R9} 17|73b37 75m25 77m33 77r42
-22U27 get_free_slot 22>41 22<54 17|67s25 81b27 92l21 92t34
-22i41 id{integer} 17|81b41 85r52
-22i54 free_slot{integer} 17|81b54 83m25 85m60 87r28 89m67
-23i17 i{integer}
-24a17 taken_ids{8A14} 17|36r34 37r36 39m41 60m33
-25a17 state_pool{9A14} 17|48r34 49r36 50m41 69m33 77r70 85r36 89r44
+5i9 places{positive} 9r39 17|92r37 100r37 104r45
+6k9*station 5z9 39l5 39e12 17|4b14 112l5 112t12
+8A14*taken_ids_t(boolean)<integer> 35r28
+9A14*state_pool_t(integer)<integer> 36r29
+10I14*hours_type<short_short_integer> 15r30 16r31 19r16 17|18r44
+11I14*minutes_type<short_short_integer> 18r18 17|16r38
+12T19*time_task 17r13 17|13b19 28l13 28t22
+14o9*minute_last{duration} 17|6r54 26r31
+15i9*open_hour{10I14} 17|38r37
+16i9*close_hour{10I14} 17|38r59
+17t9*tt{12T19}
+18i9*minutes{11I14} 17|9r63 16r28 17m33 24m33 24r44
+19i9*hours{10I14} 17|9r45 18r36 19m41 21m41 21r50 38r28 38r51
+21U19*get_time 17|8b19 10l13 10t21
+22V18*get_minute_last{duration} 17|6b18
+23U19*abort_time_task 17|30b19 33l13 33t28
+25w19*client 17|35b24 110l13 110t19
+26U27 take_id 26<35 17|46b27 56l21 56t28
+26i35 id{integer} 17|46b35 48m25 51m41
+27U27 free_id 27>35 17|70b27 75l21 75t28
+27i35 id{integer} 17|70b35 72r28 73r43
+28U27 leave 28>33 28<46 17|58b27 68t20
+28i33 id{integer} 17|58b33 62r52
+28b46 success{boolean} 17|58b45 60m25 64m41
+29U27 take_slot 29>37 29<51 17|78b27 87l21 87t30
+29i37 id{positive} 17|78b37 82r39 85r58
+29i51 free_slot{integer} 17|78b51 82m42 83m46 84r28 85r44
+30U27 get_state 30<37 17|89b27 95t20
+30r37 state{10|79R9} 17|89b37 91m25 93m33 93r42
+31U27 is_opened 31<37 17|36b27 44t20 81s25
+31b37 op{boolean} 17|36b37 43m25
+33U27 get_free_slot 33>41 33<54 17|82s25 97b27 108l21 108t34
+33i41 id{integer} 17|97b41 101r52
+33i54 free_slot{integer} 17|97b54 99m25 101m60 103r28 105m67
+34i17 i{integer}
+35a17 taken_ids{8A14} 17|49r34 50r36 52m41 73m33
+36a17 state_pool{9A14} 17|61r34 62r36 63m41 85m33 93r70 101r36 105r44
+37b17 opened{boolean} 17|39m33 41m33 43r31
 X 17 station.adb
-6i9 minutes{16|11I14} 10r63 17r28 18m33 25m33 25r44
-7i9 hours{16|10I14} 10r45 19r36 20m41 22m41 22r50
-13T19 time_task 14b19 29l13 29t22 30r13
-30t9 tt{13T19}
-36i29 i{integer} 37r46 38r47 39r51
-48i29 i{integer} 49r47 50r52
-76i29 i{integer} 77r81
-84i29 i{integer} 85r47
-88i37 i{integer} 89r55 89r80
+12b9 time_task_active{boolean} 15r23 32m17
+49i29 i{integer} 50r46 51r47 52r51
+61i29 i{integer} 62r47 63r52
+79b25 opnd{boolean} 81m35 83r28
+92i29 i{integer} 93r81
+100i29 i{integer} 101r47
+104i37 i{integer} 105r55 105r80
 

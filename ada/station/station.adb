@@ -3,17 +3,16 @@ use ada.text_io, Ada.Strings.Unbounded;
 
 package body station is
 
-	minutes: minutes_type := 55;
-	hours: hours_type := 23;
+	function get_minute_last return duration is (minute_last);
 
 	procedure get_time is begin
 		put_line("station time: " & hours'img & ":" & minutes'img);
 	end get_time;
 
-	task type time_task;
+	time_task_active: boolean := true;
 	task body time_task is
 	begin
-		loop
+		while time_task_active = true loop
 			if(minutes = minutes_type'last) then
 				minutes := 0;
 				if(hours = hours_type'last) then
@@ -24,12 +23,26 @@ package body station is
 			else
 				minutes := minutes + 1;
 			end if;
-			delay 1.0;
+			delay minute_last;
 		end loop;
 	end time_task;
-	tt: time_task;
+
+	procedure abort_time_task is
+	begin
+		time_task_active := false;
+	end abort_time_task;
 
 	protected body client is
+		procedure is_opened(op: out boolean) is
+		begin
+			if hours >= open_hour and hours < close_hour then
+				opened := true;
+			else
+				opened := false;
+			end if;
+			op := opened;
+		end;
+		----------------------------------------------------------------------------------
 		procedure take_id(id: out integer) is
 		begin
 			id := -1;
@@ -63,8 +76,11 @@ package body station is
 		----------------------------------------------------------------------------------
 		--returns number of slot taken or -1 if there are no free slots
 		procedure take_slot(id: positive; free_slot: out integer) is
+			opnd: boolean := false;
 		begin
+			is_opened(opnd);
 			get_free_slot(id,free_slot);
+			if opnd /= true then free_slot := -1; end if;
 			if free_slot /= -1 then
 				state_pool(free_slot) := id;
 			end if;

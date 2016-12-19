@@ -128,14 +128,12 @@ procedure main is
 
 	task type print_state;
 	task body print_state is
-		i:float:=0.001;
 		state: unbounded_string;
 	begin
 		loop
 			st.client.get_state(state);
 			put_line(to_string(state));
-			delay 1.0;
-			i := i+0.001;
+			delay st.get_minute_last;
 		end loop;
 	end print_state;
 
@@ -179,15 +177,21 @@ procedure main is
 
 	task type time_task;
 	task body time_task is
+		opnd: boolean := false;
 	begin
 		loop
 			flushscreen;
-			put_line("station opened");
+			st.client.is_opened(opnd);
+			if opnd = true then
+				put_line("station opened");
+			else
+				put_line("station closed");
+			end if;
 			st.get_time;
 			--put_line("time: " & hours'img & ":" & minutes'img);
 			put_line("commands");
 			put_line("[q] - quit");
-			delay 1.0;
+			delay st.get_minute_last;
 		end loop;
 	end time_task;
 
@@ -200,6 +204,7 @@ procedure main is
 		while option /= 'q' loop
 			get(option);
 		end loop;
+		st.abort_time_task;
 		abort timet;
 		abort srvt;
 		close_all_clients;
