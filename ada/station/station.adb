@@ -3,6 +3,32 @@ use ada.text_io, Ada.Strings.Unbounded;
 
 package body station is
 
+	minutes: minutes_type := 55;
+	hours: hours_type := 23;
+
+	procedure get_time is begin
+		put_line("station time: " & hours'img & ":" & minutes'img);
+	end get_time;
+
+	task type time_task;
+	task body time_task is
+	begin
+		loop
+			if(minutes = minutes_type'last) then
+				minutes := 0;
+				if(hours = hours_type'last) then
+					hours := 0;
+				else
+					hours := hours + 1;
+				end if;
+			else
+				minutes := minutes + 1;
+			end if;
+			delay 1.0;
+		end loop;
+	end time_task;
+	tt: time_task;
+
 	protected body client is
 		procedure take_id(id: out integer) is
 		begin

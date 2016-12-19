@@ -44,7 +44,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		6cc64a2f NE OO SU IL
+U main%b		main.adb		125358f7 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
@@ -67,6 +67,7 @@ W system%s		system.ads		system.ali
 W system.address_image%s  s-addima.adb		s-addima.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
 W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
@@ -109,10 +110,10 @@ D a-uncdea.ads		20070406091342 f15a5ed1
 D interfac.ads		20140225151838 69adb1b9
 D i-c.ads		20110801143639 5421119b
 D i-cstrea.ads		20130412125801 8128536b
-D main.adb		20161217130657 15ee2582
+D main.adb		20161217134253 5e1a40d3
 D sockets.ads		20161211155127 c7635c3a
-D station.ads		20161217105717 a110c54c
-D station.adb		20161217131223 b9b8baa6
+D station.ads		20161217134430 9471b2c5
+D station.adb		20161217135038 586e447c
 D system.ads		20160213141829 90249111
 D s-addima.ads		20090409150019 a1ec9d3a
 D s-atacco.ads		20120515093410 4c36d12f
@@ -120,6 +121,7 @@ D s-atocou.ads		20131010110730 cd7c94ca
 D s-atocou.adb		20131010121735 62bad392
 D s-conca2.ads		20140225151544 02a0d7d0
 D s-conca3.ads		20140225151544 0b705ca5
+D s-conca4.ads		20140225151544 7e642b20
 D s-crtl.ads		20140225151544 840e6817
 D s-exctab.ads		20140225151139 54135002
 D s-ficobl.ads		20120709130952 55a71d43
@@ -184,17 +186,18 @@ X 19 a-strunb.ads
 100V13*To_String{string} 27|77s32 99s55 115s47 136s34
 X 21 a-textio.ads
 49K13*Text_IO 471e16 27|1w68 2r43
-206U14*Get 27|189s25
+206U14*Get 27|201s25
 242U14*Put 27|31s17
-263U14*Put_Line 27|74s17 89s49 92s49 100s49 103s41 116s41 118s33 136s25 187s25
-. 188s25 193s17
+263U14*Put_Line 27|74s17 89s49 92s49 100s49 103s41 116s41 118s33 136s25 185s25
+. 188s25 189s25 206s17
 X 27 main.adb
-19U11*main 19b11 194l5 194t9
+19U11*main 19b11 207l5 207t9
 22A17 id_string{string}<integer>
 25i9 slots{integer} 34r35
-27b9 log{boolean} 182r20
-29U19 flushscreen 29b19 32l13 32t24
+27b9 log{boolean} 197r20
+29U19 flushscreen 29b19 32l13 32t24 184s25
 34K17 st[29|6] 71r17 76r17 86r41 96r41 98r49 111r33 112r33 114r41 135r25
+. 186r25
 36K17 Client_Vectors[9|45] 38r23 41r46 42r45
 38r9 All_Clients{9|55R9[36]} 47r17 69m17 69r17 70r28 110m33 110r33
 40U19 Write 40b19 40>26 48l13 48t18 88s49 99s49 115s41
@@ -219,20 +222,22 @@ X 27 main.adb
 124P14 Client_Access(50T19) 125r17 146r34 152r29
 125p9 Dummy{124P14} 170m25 171r49 172r25
 127i9 port{positive} 165r41
-129T19 print_state 130b19 140l13 140t24 142r47 183r35
+129T19 print_state 130b19 140l13 140t24 142r47 198r35
 131f17 i{float} 138m25 138r30
 132r17 state{19|79R9} 135m45 136r44
 142P14 print_state_access(129T19) 143r14
-143p9 ps{142P14} 183m25
+143p9 ps{142P14} 198m25
 145K17 client_tasks[9|45] 147r28 150r45 152r46
 147r9 all_client_tasks{9|55R9[145]} 157r17 171m25 171r25
-149U19 close_all_clients 149b19 158l13 158t30 192s17
+149U19 close_all_clients 149b19 158l13 158t30 205s17
 150U27 close 150b27 150>34 155l21 155t26 157r43
 150r34 Position{9|63R9[145]} 152r67
 152p25 ct{124P14} 154r31
 160T19 server_task 161b19 174l13 174t24 178r15
-177e9 option{character} 185r23 189m29
-178t9 srvt{160T19} 191r23
+177e9 option{character} 200r23 201m29
+178t9 srvt{160T19} 204r23
+180T19 time_task 181b19 192l13 192t22 194r16
+194t9 timet{180T19} 203r23
 X 28 sockets.ads
 42K9*Sockets 27|1w100 2r75 28|254e12
 44R9*Socket_FD 27|37r34 42r32 51r35 55r27 62r44 121r28 122r28 28|247e14
@@ -251,15 +256,16 @@ X 28 sockets.ads
 180U14*Put_Line 27|44s25 73s17 77s17 91s49
 196V13*Get_Line{string} 27|81s51
 X 29 station.ads
-6k9*station 27|1w109 34r27 29|23e12
-11w19 client 27|71r20[34] 76r20[34] 86r44[34] 96r44[34] 98r52[34] 111r36[34]
+6k9*station 27|1w109 34r27 29|27e12
+13U19 get_time 27|186s28[34]
+15w19 client 27|71r20[34] 76r20[34] 86r44[34] 96r44[34] 98r52[34] 111r36[34]
 . 112r36[34] 114r44[34] 135r28[34]
-12U27 take_id 27|71s27[34]
-13U27 free_id 27|111s43[34]
-14U27 leave 27|96s51[34] 112s43[34]
-15U27 take_slot 27|86s51[34]
-16U27 get_state 27|76s27[34] 98s59[34] 114s51[34] 135s35[34]
-X 53 s-stausa.ads
+16U27 take_id 27|71s27[34]
+17U27 free_id 27|111s43[34]
+18U27 leave 27|96s51[34] 112s43[34]
+19U27 take_slot 27|86s51[34]
+20U27 get_state 27|76s27[34] 98s59[34] 114s51[34] 135s35[34]
+X 54 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

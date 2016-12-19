@@ -177,17 +177,30 @@ procedure main is
 	option: character := ' ';
 	srvt: server_task;
 
+	task type time_task;
+	task body time_task is
+	begin
+		loop
+			flushscreen;
+			put_line("station opened");
+			st.get_time;
+			--put_line("time: " & hours'img & ":" & minutes'img);
+			put_line("commands");
+			put_line("[q] - quit");
+			delay 1.0;
+		end loop;
+	end time_task;
+
+	timet: time_task;
 	--------------------------------------------------------------------------------
 	begin
 		if(log = true) then
 			ps := new print_state;
 		end if;
 		while option /= 'q' loop
-			--flushscreen;
-			put_line("commands");
-			put_line("[q] - quit");
 			get(option);
 		end loop;
+		abort timet;
 		abort srvt;
 		close_all_clients;
 		put_line("station closed");

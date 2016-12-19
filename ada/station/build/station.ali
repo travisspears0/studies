@@ -2,18 +2,22 @@ V "GNAT Lib v4.9"
 P SS ZX
 
 RN
+RV NO_DELAY
+RV NO_FIXED_POINT
 RV NO_IO
 RV NO_PROTECTED_TYPES
+RV NO_RELATIVE_DELAY
+RV NO_TASKING
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
 
-U station%b		station.adb		1f545efb NE OO PK GE IL
+U station%b		station.adb		cbe3d7a8 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U station%s		station.ads		9e811189 BN EE NE OO PK GE IL
+U station%s		station.ads		abe06600 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -33,8 +37,8 @@ D a-textio.ads		20140129155348 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20140225151838 69adb1b9
 D i-cstrea.ads		20130412125801 8128536b
-D station.ads		20161217105717 a110c54c
-D station.adb		20161217131223 b9b8baa6
+D station.ads		20161217134430 9471b2c5
+D station.adb		20161217135038 586e447c
 D system.ads		20160213141829 90249111
 D s-atocou.ads		20131010110730 cd7c94ca
 D s-atocou.adb		20131010121735 62bad392
@@ -63,39 +67,47 @@ X 8 a-string.ads
 16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
 X 10 a-strunb.ads
 76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
-79R9*Unbounded_String<5|48R9> 473e14 16|16r48 17|47r48
-94V13*To_Unbounded_String{79R9} 17|49s34 51s50
-119V14*"&"{79R9} 17|51s48
+79R9*Unbounded_String<5|48R9> 473e14 16|20r48 17|73r48
+94V13*To_Unbounded_String{79R9} 17|75s34 77s50
+119V14*"&"{79R9} 17|77s48
 X 12 a-textio.ads
 49K13*Text_IO 471e16 17|1w10 2r9
+263U14*Put_Line 17|10s17
 X 16 station.ads
-5i9 places{positive} 9r39 17|50r37 58r37 62r45
-6k9*station 5z9 23l5 23e12 17|4b14 70l5 70t12
-8A14*taken_ids_t(boolean)<integer> 20r28
-9A14*state_pool_t(integer)<integer> 21r29
-11w19*client 17|6b24 68l13 68t19
-12U27 take_id 12<35 17|7b27 17l21 17t28
-12i35 id{integer} 17|7b35 9m25 12m41
-13U27 free_id 13>35 17|31b27 36l21 36t28
-13i35 id{integer} 17|31b35 33r28 34r43
-14U27 leave 14>33 14<46 17|19b27 29t20
-14i33 id{integer} 17|19b33 23r52
-14b46 success{boolean} 17|19b45 21m25 25m41
-15U27 take_slot 15>37 15<51 17|39b27 45l21 45t30
-15i37 id{positive} 17|39b37 41r39 43r58
-15i51 free_slot{integer} 17|39b51 41m42 42r28 43r44
-16U27 get_state 16<37 17|47b27 53t20
-16r37 state{10|79R9} 17|47b37 49m25 51m33 51r42
-18U27 get_free_slot 18>41 18<54 17|41s25 55b27 66l21 66t34
-18i41 id{integer} 17|55b41 59r52
-18i54 free_slot{integer} 17|55b54 57m25 59m60 61r28 63m67
-19i17 i{integer}
-20a17 taken_ids{8A14} 17|10r34 11r36 13m41 34m33
-21a17 state_pool{9A14} 17|22r34 23r36 24m41 43m33 51r70 59r36 63r44
+5i9 places{positive} 9r39 17|76r37 84r37 88r45
+6k9*station 5z9 27l5 27e12 17|4b14 96l5 96t12
+8A14*taken_ids_t(boolean)<integer> 24r28
+9A14*state_pool_t(integer)<integer> 25r29
+10I14*hours_type<short_short_integer> 17|7r16 19r44
+11I14*minutes_type<short_short_integer> 17|6r18 17r38
+13U19*get_time 17|9b19 11l13 11t21
+15w19*client 17|32b24 94l13 94t19
+16U27 take_id 16<35 17|33b27 43l21 43t28
+16i35 id{integer} 17|33b35 35m25 38m41
+17U27 free_id 17>35 17|57b27 62l21 62t28
+17i35 id{integer} 17|57b35 59r28 60r43
+18U27 leave 18>33 18<46 17|45b27 55t20
+18i33 id{integer} 17|45b33 49r52
+18b46 success{boolean} 17|45b45 47m25 51m41
+19U27 take_slot 19>37 19<51 17|65b27 71l21 71t30
+19i37 id{positive} 17|65b37 67r39 69r58
+19i51 free_slot{integer} 17|65b51 67m42 68r28 69r44
+20U27 get_state 20<37 17|73b27 79t20
+20r37 state{10|79R9} 17|73b37 75m25 77m33 77r42
+22U27 get_free_slot 22>41 22<54 17|67s25 81b27 92l21 92t34
+22i41 id{integer} 17|81b41 85r52
+22i54 free_slot{integer} 17|81b54 83m25 85m60 87r28 89m67
+23i17 i{integer}
+24a17 taken_ids{8A14} 17|36r34 37r36 39m41 60m33
+25a17 state_pool{9A14} 17|48r34 49r36 50m41 69m33 77r70 85r36 89r44
 X 17 station.adb
-10i29 i{integer} 11r46 12r47 13r51
-22i29 i{integer} 23r47 24r52
-50i29 i{integer} 51r81
-58i29 i{integer} 59r47
-62i37 i{integer} 63r55 63r80
+6i9 minutes{16|11I14} 10r63 17r28 18m33 25m33 25r44
+7i9 hours{16|10I14} 10r45 19r36 20m41 22m41 22r50
+13T19 time_task 14b19 29l13 29t22 30r13
+30t9 tt{13T19}
+36i29 i{integer} 37r46 38r47 39r51
+48i29 i{integer} 49r47 50r52
+76i29 i{integer} 77r81
+84i29 i{integer} 85r47
+88i37 i{integer} 89r55 89r80
 
