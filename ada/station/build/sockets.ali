@@ -1,4 +1,4 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v5"
 P SS ZX
 
 RN
@@ -39,7 +39,7 @@ W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U sockets%s		sockets.ads		89da0ae1 BN EE OO PF PK
+U sockets%s		sockets.ads		82d9c212 BN EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
@@ -53,50 +53,50 @@ W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-charac.ads		20070912115821 2d3ec45b
-D a-chlat1.ads		20140225151544 66457d31
-D a-except.ads		20140129161953 f86a4103
-D a-finali.ads		20111121113555 52ecdc1b
-D a-stream.ads		20140122164720 1a984740
-D a-tags.ads		20111212115430 6c0509d0
-D a-unccon.ads		20070406091342 f9eb8f06
-D a-uncdea.ads		20070406091342 f15a5ed1
-D gnat.ads		20110801150502 fd2ad2f1
-D g-os_lib.ads		20090409150019 0db74523
-D interfac.ads		20140225151838 69adb1b9
-D i-c.ads		20110801143639 5421119b
-D i-cpoint.ads		20130104124955 ee8a93ec
-D i-cstrin.ads		20130104124955 341d0ddf
-D sockets.ads		20161211155127 c7635c3a
-D sockets.adb		20161211155127 fa9d0c64
-D sockets-constants.ads	20161211155127 8e280ed6
-D sockets-link.ads	20161211155127 8075f26e
-D sockets-naming.ads	20161211155127 ae91aa26
-D sockets-thin.ads	20161211155127 725bfdbd
-D sockets-types.ads	20161211155127 92a98f6e
-D sockets-utils.ads	20161211155127 a12bcd44
-D system.ads		20160213141829 90249111
-D s-conca2.ads		20140225151544 02a0d7d0
-D s-conca3.ads		20140225151544 0b705ca5
-D s-exctab.ads		20140225151139 54135002
-D s-finmas.ads		20140225151139 814daec4
-D s-finroo.ads		20120426095924 4ff27390
-D s-imgint.ads		20090409150019 02dbe0c2
-D s-os_lib.ads		20140225151139 73b554c6
-D s-parame.ads		20140225151139 ab8cb46a
-D s-secsta.ads		20140225151139 86a2856d
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-stopoo.ads		20131010103753 b16154c2
-D s-stposu.ads		20121005142121 ffeba1c5
-D s-stratt.ads		20131014135145 aedef97e
-D s-string.ads		20140225151139 8fe54fb7
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
+D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-finali.ads		20140611123707 69f99942 ada.finalization%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
+D gnat.ads		20140801083227 fd2ad2f1 gnat%s
+D g-os_lib.ads		20090409150019 0db74523 gnat.os_lib%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cpoint.ads		20130104124955 ee8a93ec interfaces.c.pointers%s
+D i-cstrin.ads		20140611122922 341d0ddf interfaces.c.strings%s
+D sockets.ads		20161212171710 c7635c3a sockets%s
+D sockets.adb		20161212171710 fa9d0c64 sockets%b
+D sockets-constants.ads	20161212171710 8e280ed6 sockets.constants%s
+D sockets-link.ads	20161212171710 8075f26e sockets.link%s
+D sockets-naming.ads	20161212171710 ae91aa26 sockets.naming%s
+D sockets-thin.ads	20161212171710 725bfdbd sockets.thin%s
+D sockets-types.ads	20161212171710 92a98f6e sockets.types%s
+D sockets-utils.ads	20161212171710 a12bcd44 sockets.utils%s
+D system.ads		20141031112219 1d274481 system%s
+D s-conca2.ads		20140225151544 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20140225151544 0b705ca5 system.concat_3%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-os_lib.ads		20150220113817 5853d835 system.os_lib%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140801093848 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-string.ads		20140225151139 8fe54fb7 system.strings%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
 X 1 ada.ads
 16K9*Ada 19e8 16|39r6 129r29 134r31 135r13 139r36 145r20 146r20 227r13 230r16
 . 232r17 234r17 235r9 236r17 17|39r6 39r38 40r6 51r8 735r14
@@ -107,19 +107,19 @@ X 3 a-chlat1.ads
 35e4*LF{character} 17|103r35 283r20
 38e4*CR{character} 17|103r30 286r24
 X 6 a-stream.ads
-36K13*Streams 84e16 16|39w10 129r33 134r35 135r17 139r40 145r24 146r24 227r17
+36K13*Streams 87e16 16|39w10 129r33 134r35 135r17 139r40 145r24 146r24 227r17
 . 230r20 232r21 234r21 235r13 236r21 17|51r12
 42M9*Stream_Element 17|445r12 723r27
-44I9*Stream_Element_Offset<long_integer> 16|146r32 234r29 235r21 236r29 17|440r38
-. 441r38 444r18 482r27 492r17 519r41 556r15 724r31
-48I12*Stream_Element_Count{44I9} 16|134r43 227r25 230r28 17|464r48 493r17
+44I9*Stream_Element_Offset<long_long_integer> 16|146r32 234r29 235r21 236r29
+. 17|440r38 441r38 444r18 482r27 492r17 519r41 556r15 724r31
+51I12*Stream_Element_Count{44I9} 16|134r43 227r25 230r28 17|464r48 493r17
 . 508r27 509r26 533r28 557r15 578r27 579r26 593r41
-51A9*Stream_Element_Array(42M9)<44I9> 16|129r41 135r25 139r48 145r32 232r29
+54A9*Stream_Element_Array(42M9)<44I9> 16|129r41 135r25 139r48 145r32 232r29
 . 17|109r28 237r11 440r16 465r13 467r17 490r36 518r41 554r29 718r28
 X 9 a-uncdea.ads
 20u15*Unchecked_Deallocation 17|40w10 735r18
 X 12 interfac.ads
-38K9*Interfaces 179e15 16|40r6 164r13 244r18 244r38 250r13 17|51r21 263r13
+38K9*Interfaces 178e15 16|40r6 164r13 244r18 244r38 250r13 17|51r21 263r13
 . 317r15 318r23 339r15 340r23
 X 13 i-c.ads
 18K20*C 230e17 16|40w17 164r24 244r29 244r49 250r24 17|51r32 263r24 317r26
@@ -156,12 +156,12 @@ X 16 sockets.ads
 66X4*Socket_Error
 68U14*Connect 69>7 70>7 71>7 17|161b14 183l8 183t15
 69r7 Socket{44R9} 17|162b7 172r21
-70s7 Host{string} 17|163b7 170r49
+70a7 Host{string} 17|163b7 170r49
 71i7 Port{positive} 17|164b7 171r58
 76U14*Bind 77>7 78>7 79>7 17|140b14 155l8 155t12
 77r7 Socket{44R9} 17|141b7 152r18
 78i7 Port{natural} 17|142b7 151r58
-79s7 Host{string} 17|143b7 148r10 149r52
+79a7 Host{string} 17|143b7 148r10 149r52
 87U14*Listen 88>7 89>7 17|412b14 420l8 420t14
 88r7 Socket{44R9} 17|413b7 417r20
 89i7 Queue_Size{positive} 17|414b7 417r36
@@ -206,16 +206,16 @@ X 16 sockets.ads
 126X4*Connection_Closed 17|473r16 480r16 505r19 531r16 562r16 576r19
 128U14*Send 128>20 129>20 17|447R7 553b14 581l8 581t12
 128r20 Socket{44R9} 17|553b20 561r10 570r27
-129a20 Data{6|51A9} 17|554b20 556r41 557r41 570r38
-133V13*Receive{6|51A9} 133>22 134>22 17|228R28 464b13 483l8 483t15
+129a20 Data{6|54A9} 17|554b20 556r41 557r41 570r38
+133V13*Receive{6|54A9} 133>22 134>22 17|228R28 464b13 483l8 483t15
 133r22 Socket{44R9} 17|464b22 472r10 475r28
-134i22 Max{6|48I12} 17|464b42 467r44
+134i22 Max{6|51I12} 17|464b42 467r44
 138U14*Receive 138>23 139<23 17|242s10 489b14 511l8 511t15
 138c23 Socket<44R9> 17|489b23 499r31
-139a23 Data{6|51A9} 17|490b23 492r42 493r42 499m42 499r42
+139a23 Data{6|54A9} 17|490b23 492r42 493r42 499m42 499r42
 143U14*Receive_Some 144>7 145<7 146<7 17|517b14 534l8 534t20 545s7
 144c7 Socket<44R9> 17|517b28 525r28
-145a7 Data{6|51A9} 17|518b28 525m39 525r39 525r45 526r33 533r15
+145a7 Data{6|54A9} 17|518b28 525m39 525r39 525r45 526r33 533r15
 146i7 Last{6|44I9} 17|519b28 533m7
 150E9*Shutdown_Type 150e47 153r33 17|61r42 647r33
 150n27*Receive{150E9} 241r34 17|62r7 472r27 656r27
@@ -233,13 +233,13 @@ X 16 sockets.ads
 163r21 Socket{44R9} 17|262b21 266r14
 172U14*Put 172>19 173>19 17|430s7 437b14 448l8 448t11 457s7
 172c19 Socket<44R9> 17|437b19 447r13
-173s19 Str{string} 17|438b19 440r61 441r61 443r16 445r47
+173a19 Str{string} 17|438b19 440r61 441r61 443r16 445r47
 176U14*New_Line 176>24 177>24 17|426b14 431l8 431t16
 176c24 Socket<44R9> 17|426b24 430r12
 177i24 Count{natural} 17|427b24 430r27
 180U14*Put_Line 180>24 181>24 17|454b14 458l8 458t16
 180c24 Socket<44R9> 17|454b24 457r12
-181s24 Str{string} 17|454b50 457r20
+181a24 Str{string} 17|454b50 457r20
 184V13*Get{string} 184>18 17|215b13 230l8 230t11
 184c18 Socket<44R9> 17|215b18 218r10 218r59 221r26 222r27 222r50 224r13 224r36
 . 228r37
@@ -248,7 +248,7 @@ X 16 sockets.ads
 . 251r33
 190U14*Get_Line 190>24 191<24 192<24 17|273b14 295l8 295t16 308s7
 190c24 Socket<44R9> 17|274b7 282r28
-191s24 Str{string} 17|275b7 278r28 287m13 289r24 290r24
+191a24 Str{string} 17|275b7 278r28 287m13 289r24 290r24
 192i24 Last{natural} 17|276b7 284m13 290m16
 196V13*Get_Line{string} 196>23 197>23 17|301b13 310l8 310t16
 196c23 Socket<44R9> 17|302b7 308r17
@@ -263,8 +263,8 @@ X 16 sockets.ads
 220V13*Get_Receive_Queue_Size{integer} 220>37 17|316b13 332l8 332t30
 220r37 Socket{44R9} 17|316b37 326r25
 229R9 Buffer_Type 230d7 237e14 239r33 17|593r28 735r42
-230i7*Length{6|48I12} 232r56
-232a7*Content{6|51A9} 17|221r40 250r33 545m43
+230i7*Length{6|51I12} 232r56
+232a7*Content{6|54A9} 17|221r40 250r33 545m43
 234i7*First{6|44I9} 17|208r28 222r41 224m27 250r56 251m24 251r47 546m21
 236i7*Last{6|44I9} 17|208r50 222r64 224r50 545m66
 239P9 Buffer_Access(229R9) 246r18 17|735r55
@@ -288,7 +288,7 @@ X 17 sockets.adb
 105U14 Refill 105>22 247s13 540b14 547l8 547t14
 105c22 Socket<16|44R9> 541b7 544r22 545r21 545r29 545r52 546r7
 109V13 To_String{string} 109>24 221s15 228s17 718b13 727l8 727t17
-109a24 S{6|51A9} 718b24 719r29 724r28 724r59
+109a24 S{6|54A9} 718b24 719r29 724r28 724r59
 111V13 Empty_Buffer{boolean} 111>27 206b13 209l8 209t20 218s45 246s13
 111c27 Socket<16|44R9> 206b27 208r14 208r36
 121r7 Sin{22|71R9} 122r29 125m36 125r36
@@ -298,7 +298,7 @@ X 17 sockets.adb
 166r7 Sin{22|71R9} 169m7 170m7 171m7 172m32 172r32 172r45
 167i7 Current_Errno{integer} 173m10 174r13 179r31
 220a13 S{string} 225r20
-237a7 C{6|51A9} 242m27 250m10 255r29
+237a7 C{6|54A9} 242m27 250m10 255r29
 278i7 Index{positive} 284r21 287r18 288m13 288r22 289r16
 279e7 Char{character} 282m10 283r13 286r16 287r28
 305a7 Result{string} 308m25 309r14
@@ -310,14 +310,14 @@ X 17 sockets.adb
 366i7 Len{13|35I9} 375m16 378m56 378r56 390m16 393m55 393r55
 372e16 C_Char_Optval{13|72E9} 374r31 378m33 378r33 382r36
 387i16 C_Int_Optval{13|35I9} 389r31 393m33 393r33 397r35
-440a7 Stream{6|51A9} 444m10 447r21
+440a7 Stream{6|54A9} 444m10 447r21
 443i11 I{integer} 444r41 445r52
-467a7 Buffer{6|51A9} 475m39 475r39 475r55 482r14
+467a7 Buffer{6|54A9} 475m39 475r39 475r55 482r14
 468r7 Addr{22|71R9} 469r32 476m28 476r28
 469i7 Addrlen{13|35I9} 476m42 476r42
 470i7 Count{13|35I9} 475m7 477r10 479r13 482r50
 492i7 Index{6|44I9} 499r48 508m10 508r19
-493i7 Rest{6|48I12} 498r13 500r36 509m10 509r19
+493i7 Rest{6|51I12} 498r13 500r36 509m10 509r19
 494r7 Addr{22|71R9} 495r32 500m46 500r46
 495i7 Addrlen{13|35I9} 500m60 500r60
 496i7 Count{13|35I9} 499m10 502r13 504r16 508r49 509r48
@@ -325,7 +325,7 @@ X 17 sockets.adb
 522i7 Addrlen{13|35I9} 527m42 527r42
 523i7 Count{13|35I9} 525m7 528r10 530r13 533r50
 556i7 Index{6|44I9} 570r44 578m10 578r19
-557i7 Rest{6|48I12} 569r13 570r66 579m10 579r19
+557i7 Rest{6|51I12} 569r13 570r66 579m10 579r19
 558i7 Count{13|35I9} 570m10 571r13 578r49 579r48
 559i7 Flags{13|35I9} 566m10 570r73
 611e16 C_Char_Optval{13|72E9} 613r31 616m33 616r33

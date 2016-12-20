@@ -1,4 +1,4 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v5"
 P SS ZX
 
 RN
@@ -23,52 +23,49 @@ W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-charac.ads		20070912115821 2d3ec45b
-D a-chlat1.ads		20140225151544 66457d31
-D a-except.ads		20140129161953 f86a4103
-D a-finali.ads		20111121113555 52ecdc1b
-D a-ioexce.ads		20140225151544 e4a01f64
-D a-stream.ads		20140122164720 1a984740
-D a-string.ads		20070406091342 90ac6797
-D a-strmap.ads		20090409150019 9cb836fb
-D a-strunb.ads		20120426100351 3f91d4c5
-D a-tags.ads		20111212115430 6c0509d0
-D a-textio.ads		20140129155348 386df5d4
-D a-unccon.ads		20070406091342 f9eb8f06
-D interfac.ads		20140225151838 69adb1b9
-D i-cstrea.ads		20130412125801 8128536b
-D station.ads		20161219112942 d5ad0282
-D station.adb		20161219113331 6eef8af3
-D system.ads		20160213141829 90249111
-D s-atocou.ads		20131010110730 cd7c94ca
-D s-atocou.adb		20131010121735 62bad392
-D s-crtl.ads		20140225151544 840e6817
-D s-exctab.ads		20140225151139 54135002
-D s-ficobl.ads		20120709130952 55a71d43
-D s-finmas.ads		20140225151139 814daec4
-D s-finroo.ads		20120426095924 4ff27390
-D s-parame.ads		20140225151139 ab8cb46a
-D s-pooglo.ads		20110804083314 542f33d0
-D s-secsta.ads		20140225151139 86a2856d
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-stopoo.ads		20131010103753 b16154c2
-D s-stposu.ads		20121005142121 ffeba1c5
-D s-stratt.ads		20131014135145 aedef97e
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
-D s-wchcon.ads		20140225151139 1b7d22d2
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
+D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-finali.ads		20140611123707 69f99942 ada.finalization%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-string.ads		20070406091342 90ac6797 ada.strings%s
+D a-strmap.ads		20140611123156 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20140717072738 3f91d4c5 ada.strings.unbounded%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D station.ads		20161219152501 d5ad0282 station%s
+D station.adb		20161219152501 6eef8af3 station%b
+D system.ads		20141031112219 1d274481 system%s
+D s-atocou.ads		20141017084241 cd7c94ca system.atomic_counters%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
 X 1 ada.ads
 16K9*Ada 19e8 16|1r6 2r5 17|1r6 1r19 2r5 2r18
 X 8 a-string.ads
 16K13*Strings 35e16 16|1r10 2r9 17|1r23 2r22
 X 10 a-strunb.ads
 76K21*Unbounded 489e26 16|1w18 2r17 17|1w31 2r30
-79R9*Unbounded_String<5|48R9> 473e14 16|30r48 17|89r48
+79R9*Unbounded_String<5|43R9> 473e14 16|30r48 17|89r48
 94V13*To_Unbounded_String{79R9} 17|91s34 93s50
 119V14*"&"{79R9} 17|93s48
 X 12 a-textio.ads

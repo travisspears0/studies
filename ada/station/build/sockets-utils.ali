@@ -1,4 +1,4 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v5"
 P SS ZX
 
 RN
@@ -8,7 +8,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U sockets.utils%b	sockets-utils.adb	52df52b6 NE OO PK
+U sockets.utils%b	sockets-utils.adb	75e60d4c NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W sockets%s		sockets.adb		sockets.ali
@@ -23,46 +23,45 @@ W interfaces%s		interfac.ads		interfac.ali
 W interfaces.c%s	i-c.adb			i-c.ali
 W sockets%s		sockets.adb		sockets.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-except.ads		20140129161953 f86a4103
-D a-stream.ads		20140122164720 1a984740
-D a-tags.ads		20111212115430 6c0509d0
-D a-unccon.ads		20070406091342 f9eb8f06
-D a-uncdea.ads		20070406091342 f15a5ed1
-D gnat.ads		20110801150502 fd2ad2f1
-D g-os_lib.ads		20090409150019 0db74523
-D interfac.ads		20140225151838 69adb1b9
-D i-c.ads		20110801143639 5421119b
-D i-cpoint.ads		20130104124955 ee8a93ec
-D i-cstrin.ads		20130104124955 341d0ddf
-D sockets.ads		20161211155127 c7635c3a
-D sockets-thin.ads	20161211155127 725bfdbd
-D sockets-types.ads	20161211155127 92a98f6e
-D sockets-utils.ads	20161211155127 a12bcd44
-D sockets-utils.adb	20161211155127 e9e1b25d
-D system.ads		20160213141829 90249111
-D s-conca4.ads		20140225151544 7e642b20
-D s-exctab.ads		20140225151139 54135002
-D s-imgint.ads		20090409150019 02dbe0c2
-D s-os_lib.ads		20140225151139 73b554c6
-D s-parame.ads		20140225151139 ab8cb46a
-D s-secsta.ads		20140225151139 86a2856d
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-stratt.ads		20131014135145 aedef97e
-D s-string.ads		20140225151139 8fe54fb7
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
+D gnat.ads		20140801083227 fd2ad2f1 gnat%s
+D g-os_lib.ads		20090409150019 0db74523 gnat.os_lib%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cpoint.ads		20130104124955 ee8a93ec interfaces.c.pointers%s
+D i-cstrin.ads		20140611122922 341d0ddf interfaces.c.strings%s
+D sockets.ads		20161212171710 c7635c3a sockets%s
+D sockets-thin.ads	20161212171710 725bfdbd sockets.thin%s
+D sockets-types.ads	20161212171710 92a98f6e sockets.types%s
+D sockets-utils.ads	20161212171710 a12bcd44 sockets.utils%s
+D sockets-utils.adb	20161212171710 e9e1b25d sockets.utils%b
+D system.ads		20141031112219 1d274481 system%s
+D s-conca4.ads		20140225151544 7e642b20 system.concat_4%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-os_lib.ads		20150220113817 5853d835 system.os_lib%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-string.ads		20140225151139 8fe54fb7 system.strings%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
 X 1 ada.ads
 16K9*Ada 19e8 17|39r6 39r26
 X 2 a-except.ads
 53K13*Exceptions 360e19 17|39w10 39r30
 89U14*Raise_Exception 17|121s13 124s10
 X 9 interfac.ads
-38K9*Interfaces 179e15 16|39r6 50r37 51r13 54r37 55r13 17|45r8
+38K9*Interfaces 178e15 16|39r6 50r37 51r13 54r37 55r13 17|45r8
 X 10 i-c.ads
 18K20*C 230e17 16|39w17 50r48 51r24 54r48 55r24 17|45r19
 44M9*unsigned_short 16|50r50 51r26 54r50 55r26 17|91r37 92r13
@@ -75,17 +74,17 @@ X 14 sockets-thin.ads
 X 16 sockets-utils.ads
 41K25*Utils 13|42k9 16|66l13 66e18 17|43b22 135l13 135t18
 45U14*Raise_With_Message 45>34 46>34 47r22 17|108b14 133l8 133t26
-45s34 Message{string} 17|108b34 118r47 124r50
+45a34 Message{string} 17|108b34 118r47 124r50
 46b34 With_Errno{boolean} 17|109b34 113r10
 50V13*Port_To_Network{10|44M9} 50>30 52r19 56r14 17|91b13 102l8 102t23
 50m30 Port{10|44M9} 17|91b30 97r17 99r18 99r33
 54V13*Network_To_Port=56:14{10|44M9}
 54m30 Port{10|44M9}
 58V14*"*"{string} 58>18 58>33 17|51b14 62l9 62t11
-58s18 Left{string} 17|51b18 52r29 54r36 57r36 58r27 59r26
+58a18 Left{string} 17|51b18 52r29 54r36 57r36 58r27 59r26
 58i33 Right{natural} 17|51b33 52r43 56r21
 62V13*Is_IP_Address{boolean} 62>28 17|68b13 85l8 85t21
-62s28 Something{string} 17|68b28 72r20 74r41
+62a28 Something{string} 17|68b28 72r20 74r41
 X 17 sockets-utils.adb
 52a7 Result{string} 57m10 61r14
 53i7 First{positive} 54r28 57r18 58m10 58r19
@@ -96,7 +95,7 @@ X 17 sockets-utils.adb
 111i7 Current_Errno{integer} 119r30
 118a13 Message_Text=119:45{string} 121r53
 X 18 system.ads
-37K9*System 17|41w6 41r26 18|152e11
-88n23*High_Order_First{88E9} 17|96r30
-89e4*Default_Bit_Order{88E9} 17|96r10
+37K9*System 17|41w6 41r26 18|155e11
+91n23*High_Order_First{91E9} 17|96r30
+92e4*Default_Bit_Order{91E9} 17|96r10
 

@@ -1,5 +1,5 @@
-with Ada.Containers.Vectors, Ada.Command_Line, Ada.Exceptions, Ada.Text_IO, Ada.Strings.Unbounded, Sockets, station;
-use Ada.Command_Line, Ada.Exceptions, Ada.Text_IO, Ada.Strings.Unbounded, Sockets;
+with Ada.Containers.Vectors, Ada.Command_Line, Ada.Exceptions, Ada.Text_IO, Ada.Strings.Unbounded, Sockets, station, ada.calendar;
+use Ada.Command_Line, Ada.Exceptions, Ada.Text_IO, Ada.Strings.Unbounded, Sockets,ada.calendar;
 
 --	COMMUNICATION
 --		
@@ -178,8 +178,10 @@ procedure main is
 	task type time_task;
 	task body time_task is
 		opnd: boolean := false;
+		next: time := clock;
 	begin
 		loop
+			delay until next;
 			flushscreen;
 			st.client.is_opened(opnd);
 			if opnd = true then
@@ -188,10 +190,8 @@ procedure main is
 				put_line("station closed");
 			end if;
 			st.get_time;
-			--put_line("time: " & hours'img & ":" & minutes'img);
-			put_line("commands");
-			put_line("[q] - quit");
-			delay st.get_minute_last;
+			next := next+st.get_minute_last;
+			--delay st.get_minute_last;
 		end loop;
 	end time_task;
 
@@ -201,9 +201,7 @@ procedure main is
 		if(log = true) then
 			ps := new print_state;
 		end if;
-		while option /= 'q' loop
-			get(option);
-		end loop;
+		get(option);
 		st.abort_time_task;
 		abort timet;
 		abort srvt;
