@@ -11,4 +11,6 @@
 		<item value="true" key="platform:/plugin/org.eclipse.papyrus.customization.properties/UICustom/PropertiesContext.custom"/>
 		<item value="true" key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/SimpleUML.custom"/>
 	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Type:type">
+	</section>
 </section>

@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_l9ovcL-gEeagfNCrRbH5EA" name="RootElement">
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_rf8hcNMoEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:Stereotype" href="pathmap://UML_PROFILES/Standard.profile.uml#Library"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJFlANMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGMENMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzINMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigDecimal"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzIdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzItMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzI9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBooleanObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzJNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzJdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzJtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzJ9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJGzKNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ECharacterObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaMNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaMdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDiagnosticChain"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaMtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaM9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDoubleObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaNNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaNdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFeatureMap"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaNtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFeatureMapEntry"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaN9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaONMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloatObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaOdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJHaOtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBQNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInvocationTargetException"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBQdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaClass"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBQtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBQ9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBRNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELongObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBRdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EResource"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBRtMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EResourceSet"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBR9MpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EShort"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIBSNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EShortObject"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIoUNMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_YJIoUdMpEealV5J5YAKhPg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ETreeIterator"/>
+  </elementImport>
   <packagedElement xmi:type="uml:Actor" xmi:id="_tfPqQL-hEeagfNCrRbH5EA" name="Centrala"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_uqTIIL-hEeagfNCrRbH5EA" name="Ratownicy"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_w7CbsL-hEeagfNCrRbH5EA" name="Zgłaszający"/>
@@ -307,5 +409,67 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_cqBpQcLFEeaNScsCYJSrKw" name="wezwanie wsparcia" type="_XuduMMLFEeaNScsCYJSrKw" association="_cqBCMMLFEeaNScsCYJSrKw"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_cqBpQsLFEeaNScsCYJSrKw" name="centrala" type="_b4_08MLFEeaNScsCYJSrKw" association="_cqBCMMLFEeaNScsCYJSrKw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_d_sfkNLHEeaRh6-XdjjcCg" name="Centrala" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aNRqUNMpEealV5J5YAKhPg" name="zgloszenia">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aYeNsNMpEealV5J5YAKhPg" name="karetki">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yZZaotMqEealV5J5YAKhPg" name="zgloszenie" type="_kJWR4NMpEealV5J5YAKhPg" association="_yZYzkNMqEealV5J5YAKhPg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4ZxBoNMqEealV5J5YAKhPg" name="karetka" type="_lQk_sNMpEealV5J5YAKhPg" association="_4ZvzgNMqEealV5J5YAKhPg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kJWR4NMpEealV5J5YAKhPg" name="Zgloszenie">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FgpNwNMqEealV5J5YAKhPg" name="zglaszajacy" type="_oULTkNMpEealV5J5YAKhPg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IzBkgNMqEealV5J5YAKhPg" name="adres">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_L_YLwNMqEealV5J5YAKhPg" name="opisSytuacji">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bW1d8dMqEealV5J5YAKhPg" name="zglaszajacy" type="_oULTkNMpEealV5J5YAKhPg" association="_bW024NMqEealV5J5YAKhPg"/>
+    <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_CxdOMNMrEealV5J5YAKhPg" name="STAN">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_GDSyYNMrEealV5J5YAKhPg" name="zgloszony"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HAbwENMrEealV5J5YAKhPg" name="realizowany"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_H3q6ENMrEealV5J5YAKhPg" name="odwolany"/>
+    </nestedClassifier>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lQk_sNMpEealV5J5YAKhPg" name="Karetka">
+    <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_44mdQNMrEealV5J5YAKhPg" name="STAN" visibility="package">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8XlsoNMrEealV5J5YAKhPg" name="gotowa"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9dUloNMrEealV5J5YAKhPg" name="obsluguje"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-bEnUNMrEealV5J5YAKhPg" name="wraca"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_CGGuoNMsEealV5J5YAKhPg" name="wNaprawie"/>
+    </nestedClassifier>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oULTkNMpEealV5J5YAKhPg" name="Zglaszajacy">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2baUANMpEealV5J5YAKhPg" name="imie">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6nX-INMpEealV5J5YAKhPg" name="nazwisko">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bW024NMqEealV5J5YAKhPg" memberEnd="_bW1d8dMqEealV5J5YAKhPg _bW1d8tMqEealV5J5YAKhPg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bW024dMqEealV5J5YAKhPg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bW1d8NMqEealV5J5YAKhPg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bW1d8tMqEealV5J5YAKhPg" name="zgloszenie" type="_kJWR4NMpEealV5J5YAKhPg" association="_bW024NMqEealV5J5YAKhPg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yZYzkNMqEealV5J5YAKhPg" memberEnd="_yZZaotMqEealV5J5YAKhPg _yZZao9MqEealV5J5YAKhPg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yZZaoNMqEealV5J5YAKhPg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yZZaodMqEealV5J5YAKhPg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yZZao9MqEealV5J5YAKhPg" name="centrala" type="_d_sfkNLHEeaRh6-XdjjcCg" association="_yZYzkNMqEealV5J5YAKhPg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4ZvzgNMqEealV5J5YAKhPg" memberEnd="_4ZxBoNMqEealV5J5YAKhPg _4ZxBodMqEealV5J5YAKhPg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4ZwakNMqEealV5J5YAKhPg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4ZwakdMqEealV5J5YAKhPg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4ZxBodMqEealV5J5YAKhPg" name="centrala" type="_d_sfkNLHEeaRh6-XdjjcCg" association="_4ZvzgNMqEealV5J5YAKhPg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_t7FKUNMsEeaRWsto0kPFwQ" name="Activity1" node="_yt6nMNMsEeaRWsto0kPFwQ">
+    <node xmi:type="uml:InitialNode" xmi:id="_yt6nMNMsEeaRWsto0kPFwQ" name="start"/>
   </packagedElement>
 </uml:Model>
