@@ -469,7 +469,60 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_4ZxBodMqEealV5J5YAKhPg" name="centrala" type="_d_sfkNLHEeaRh6-XdjjcCg" association="_4ZvzgNMqEealV5J5YAKhPg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_t7FKUNMsEeaRWsto0kPFwQ" name="Activity1" node="_yt6nMNMsEeaRWsto0kPFwQ">
-    <node xmi:type="uml:InitialNode" xmi:id="_yt6nMNMsEeaRWsto0kPFwQ" name="start"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_t7FKUNMsEeaRWsto0kPFwQ" name="Activity1" node="_TEDcUNf0EeaKtr4z29Gq-g _cZ38MNf0EeaKtr4z29Gq-g _r_PukNf0EeaKtr4z29Gq-g _0c20ENf0EeaKtr4z29Gq-g _2EDbYNf0EeaKtr4z29Gq-g _TezpMNf1EeaKtr4z29Gq-g">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5rWSMNf0EeaKtr4z29Gq-g" name="tak" target="_2EDbYNf0EeaKtr4z29Gq-g" source="_r_PukNf0EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6XniUNf0EeaKtr4z29Gq-g" name="nie" target="_cZ38MNf0EeaKtr4z29Gq-g" source="_r_PukNf0EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_PkyDoNf1EeaKtr4z29Gq-g" target="_r_PukNf0EeaKtr4z29Gq-g" source="_TEDcUNf0EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XEsKwNf1EeaKtr4z29Gq-g" target="_TezpMNf1EeaKtr4z29Gq-g" source="_2EDbYNf0EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XoBhUNf1EeaKtr4z29Gq-g" target="_TezpMNf1EeaKtr4z29Gq-g" source="_cZ38MNf0EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_TEDcUNf0EeaKtr4z29Gq-g" name="" outgoing="_PkyDoNf1EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_cZ38MNf0EeaKtr4z29Gq-g" name="Odłóż zgłoszenie do kolejki oczekujących" incoming="_6XniUNf0EeaKtr4z29Gq-g" outgoing="_XoBhUNf1EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_r_PukNf0EeaKtr4z29Gq-g" name="lista karetek nie jest pusta" incoming="_PkyDoNf1EeaKtr4z29Gq-g" outgoing="_5rWSMNf0EeaKtr4z29Gq-g _6XniUNf0EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_0c20ENf0EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_2EDbYNf0EeaKtr4z29Gq-g" name="Ściągnij karetkę będącą najbliżej miejsca zgłoszenia" incoming="_5rWSMNf0EeaKtr4z29Gq-g" outgoing="_XEsKwNf1EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TezpMNf1EeaKtr4z29Gq-g" name="Powiadom zgłaszających o podjętej decyzji" incoming="_XEsKwNf1EeaKtr4z29Gq-g _XoBhUNf1EeaKtr4z29Gq-g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_c46MINf1EeaKtr4z29Gq-g" name="Activity2" node="_gmMWMNf1EeaKtr4z29Gq-g _nHGecNf1EeaKtr4z29Gq-g _0g5KENf1EeaKtr4z29Gq-g _76-WANf1EeaKtr4z29Gq-g _G0fdQNf2EeaKtr4z29Gq-g _OdRzkNf2EeaKtr4z29Gq-g _ds5YYNf2EeaKtr4z29Gq-g _nyJxINf2EeaKtr4z29Gq-g _0CceENf2EeaKtr4z29Gq-g _E46r8Nf3EeaKtr4z29Gq-g _XFWnMNf3EeaKtr4z29Gq-g _aRfMANf3EeaKtr4z29Gq-g _lNeYcNf3EeaKtr4z29Gq-g _nLAcINf3EeaKtr4z29Gq-g">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6Ab78Nf1EeaKtr4z29Gq-g" target="_nHGecNf1EeaKtr4z29Gq-g" source="_gmMWMNf1EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6mFmsNf1EeaKtr4z29Gq-g" target="_0g5KENf1EeaKtr4z29Gq-g" source="_nHGecNf1EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_RnynwNf2EeaKtr4z29Gq-g" name="tak" target="_76-WANf1EeaKtr4z29Gq-g" source="_0g5KENf1EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_S2kvENf2EeaKtr4z29Gq-g" target="_G0fdQNf2EeaKtr4z29Gq-g" source="_76-WANf1EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TR9DgNf2EeaKtr4z29Gq-g" target="_OdRzkNf2EeaKtr4z29Gq-g" source="_G0fdQNf2EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fdcwANf2EeaKtr4z29Gq-g" name="nie" target="_ds5YYNf2EeaKtr4z29Gq-g" source="_0g5KENf1EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BY3soNf3EeaKtr4z29Gq-g" target="_nyJxINf2EeaKtr4z29Gq-g" source="_ds5YYNf2EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_De8BQNf3EeaKtr4z29Gq-g" name="nie" target="_0CceENf2EeaKtr4z29Gq-g" source="_nyJxINf2EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_RcpSQNf3EeaKtr4z29Gq-g" name="tak" target="_E46r8Nf3EeaKtr4z29Gq-g" source="_nyJxINf2EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Yq4akNf3EeaKtr4z29Gq-g" target="_XFWnMNf3EeaKtr4z29Gq-g" source="_0CceENf2EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bxb70Nf3EeaKtr4z29Gq-g" target="_aRfMANf3EeaKtr4z29Gq-g" source="_E46r8Nf3EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ptwFsNf3EeaKtr4z29Gq-g" target="_nLAcINf3EeaKtr4z29Gq-g" source="_XFWnMNf3EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_qBEqUNf3EeaKtr4z29Gq-g" target="_nLAcINf3EeaKtr4z29Gq-g" source="_aRfMANf3EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_qz51cNf3EeaKtr4z29Gq-g" target="_lNeYcNf3EeaKtr4z29Gq-g" source="_nLAcINf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_gmMWMNf1EeaKtr4z29Gq-g" name="" outgoing="_6Ab78Nf1EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_nHGecNf1EeaKtr4z29Gq-g" name="Karetka jedzie na miejsce zgłoszenia" incoming="_6Ab78Nf1EeaKtr4z29Gq-g" outgoing="_6mFmsNf1EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_0g5KENf1EeaKtr4z29Gq-g" name="problemy na drodze, nie może dotrzeć" incoming="_6mFmsNf1EeaKtr4z29Gq-g" outgoing="_RnynwNf2EeaKtr4z29Gq-g _fdcwANf2EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_76-WANf1EeaKtr4z29Gq-g" name="Przekaż zgłoszenie do centrali jako nowe" incoming="_RnynwNf2EeaKtr4z29Gq-g" outgoing="_S2kvENf2EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_G0fdQNf2EeaKtr4z29Gq-g" name="Powiadom centralę o problemach" incoming="_S2kvENf2EeaKtr4z29Gq-g" outgoing="_TR9DgNf2EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_OdRzkNf2EeaKtr4z29Gq-g" name="Wróć do szpitala jak najszybciej się da" incoming="_TR9DgNf2EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ds5YYNf2EeaKtr4z29Gq-g" name="Obsłuż zdarzenie" incoming="_fdcwANf2EeaKtr4z29Gq-g" outgoing="_BY3soNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_nyJxINf2EeaKtr4z29Gq-g" name="Zdarzenie wymaga eskorty" incoming="_BY3soNf3EeaKtr4z29Gq-g" outgoing="_De8BQNf3EeaKtr4z29Gq-g _RcpSQNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_0CceENf2EeaKtr4z29Gq-g" name="Sprawdź stan pojazdu" incoming="_De8BQNf3EeaKtr4z29Gq-g" outgoing="_Yq4akNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_E46r8Nf3EeaKtr4z29Gq-g" name="Eskortuj poszkodowanych do szpitala" incoming="_RcpSQNf3EeaKtr4z29Gq-g" outgoing="_bxb70Nf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_XFWnMNf3EeaKtr4z29Gq-g" name="Wróć do szpitala" incoming="_Yq4akNf3EeaKtr4z29Gq-g" outgoing="_ptwFsNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_aRfMANf3EeaKtr4z29Gq-g" name="Sprawdź stan pojazdu" incoming="_bxb70Nf3EeaKtr4z29Gq-g" outgoing="_qBEqUNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_lNeYcNf3EeaKtr4z29Gq-g" name="Dodaj się do listy dostępnych karetek" incoming="_qz51cNf3EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_nLAcINf3EeaKtr4z29Gq-g" name="Jeśli trzeba zmień personel" incoming="_ptwFsNf3EeaKtr4z29Gq-g _qBEqUNf3EeaKtr4z29Gq-g" outgoing="_qz51cNf3EeaKtr4z29Gq-g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_-Tv5UNf3EeaKtr4z29Gq-g" name="Activity3" node="_BQZ3sNf4EeaKtr4z29Gq-g _MeBmsNf4EeaKtr4z29Gq-g _T17oYNf4EeaKtr4z29Gq-g _Z7Hd8Nf4EeaKtr4z29Gq-g _bRzkENf4EeaKtr4z29Gq-g _dinJENf4EeaKtr4z29Gq-g">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_SurFYNf4EeaKtr4z29Gq-g" target="_MeBmsNf4EeaKtr4z29Gq-g" source="_BQZ3sNf4EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Xb63oNf4EeaKtr4z29Gq-g" name="tak" target="_T17oYNf4EeaKtr4z29Gq-g" source="_MeBmsNf4EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_grXCsNf4EeaKtr4z29Gq-g" name="nie" target="_Z7Hd8Nf4EeaKtr4z29Gq-g" source="_MeBmsNf4EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hlM0wNf4EeaKtr4z29Gq-g" name="nie" target="_bRzkENf4EeaKtr4z29Gq-g" source="_T17oYNf4EeaKtr4z29Gq-g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_itR3INf4EeaKtr4z29Gq-g" name="tak" target="_dinJENf4EeaKtr4z29Gq-g" source="_T17oYNf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_BQZ3sNf4EeaKtr4z29Gq-g" name="" outgoing="_SurFYNf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_MeBmsNf4EeaKtr4z29Gq-g" name="Stan baku ok" incoming="_SurFYNf4EeaKtr4z29Gq-g" outgoing="_Xb63oNf4EeaKtr4z29Gq-g _grXCsNf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_T17oYNf4EeaKtr4z29Gq-g" name="inne parametry ok" incoming="_Xb63oNf4EeaKtr4z29Gq-g" outgoing="_hlM0wNf4EeaKtr4z29Gq-g _itR3INf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Z7Hd8Nf4EeaKtr4z29Gq-g" name="zatankuj" incoming="_grXCsNf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bRzkENf4EeaKtr4z29Gq-g" name="wykonaj naprawę" incoming="_hlM0wNf4EeaKtr4z29Gq-g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dinJENf4EeaKtr4z29Gq-g" name="Potwierdź dobry stan pojazdu" incoming="_itR3INf4EeaKtr4z29Gq-g"/>
   </packagedElement>
 </uml:Model>
