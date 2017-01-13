@@ -2,15 +2,21 @@
 <di:SashWindowsMngr xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.eclipse.org/papyrus/0.7.0/sashdi">
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0" restoreActivePage="true">
     <windows>
-      <children xsi:type="di:TabFolder" currentSelection="//@sashModel/@windows.0/@children.0/@children.2">
+      <children xsi:type="di:TabFolder" currentSelection="//@sashModel/@windows.0/@children.0/@children.4">
         <children>
-          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_eTyOsNf1EeaKtr4z29Gq-g"/>
+          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_TaeaUNmLEeaQAt70D71_qQ"/>
         </children>
         <children>
-          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#__aUf0Nf3EeaKtr4z29Gq-g"/>
+          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_UYJsoNK-EeaRh6-XdjjcCg"/>
         </children>
         <children>
-          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_JrQO4Nl-Eea_sv1UdmrzAQ"/>
+          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_3dIbINmJEeaQAt70D71_qQ"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_nVJs8NlzEeaCNrxuN5l9vg"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="platform:/resource/Pogotowie/model.notation#_gpRrANmYEeavbLMjHBROgQ"/>
         </children>
       </children>
     </windows>

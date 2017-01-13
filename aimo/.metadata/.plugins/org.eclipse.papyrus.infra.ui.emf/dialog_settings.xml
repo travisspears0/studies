@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Constraint:guard">
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Constraint:postcondition">
 	</section>
-	<section name="org.eclipse.papyrus.infra.ui.emf.customizationManager">
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.customization.properties/UICustom/PropertiesUI.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.infra.nattable.modelexplorer/resources/PapyrusTable.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/ReadOnlyElement.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/StereotypeDisplay.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/OpenedPage.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.modelexplorer/resources/PapyrusDiagram.custom"/>
-		<item value="false" key="platform:/plugin/org.eclipse.papyrus.customization.paletteconfiguration/facet/PaletteConfiguration.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.customization.properties/UICustom/PropertiesContext.custom"/>
-		<item value="true" key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/SimpleUML.custom"/>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Port:port">
 	</section>
-	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:UseCase:useCase">
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Constraint:bodyCondition">
 	</section>
 	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Classifier:classifier">
 		<section name="History">
@@ -26,10 +17,10 @@
 	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:StructuralFeature:definingFeature">
 		<section name="History">
 			<list key="PreviousSelection">
+				<item value="platform:/resource/Pogotowie/model.uml#_S9vScNl0EeaCNrxuN5l9vg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_L_YLwNMqEealV5J5YAKhPg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_IzBkgNMqEealV5J5YAKhPg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_FgpNwNMqEealV5J5YAKhPg"/>
-				<item value="platform:/resource/Pogotowie/model.uml#_S9vScNl0EeaCNrxuN5l9vg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_FMxSYNlzEeaCNrxuN5l9vg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_6nX-INMpEealV5J5YAKhPg"/>
 				<item value="platform:/resource/Pogotowie/model.uml#_2baUANMpEealV5J5YAKhPg"/>
@@ -37,6 +28,52 @@
 				<item value="platform:/resource/Pogotowie/model.uml#_aYeNsNMpEealV5J5YAKhPg"/>
 			</list>
 		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Pogotowie/model.uml#_kJWR4NMpEealV5J5YAKhPg"/>
+				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Property:subsettedProperty">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Constraint:guard">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Pogotowie/model.uml#_kJWR4NMpEealV5J5YAKhPg"/>
+				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history_container_uml:Event:event">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Pogotowie/model.uml#_l9ovcL-gEeagfNCrRbH5EA"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history_container_uml:Port:port">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.customizationManager">
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.customization.properties/UICustom/PropertiesUI.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.infra.nattable.modelexplorer/resources/PapyrusTable.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/ReadOnlyElement.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/StereotypeDisplay.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/OpenedPage.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.modelexplorer/resources/PapyrusDiagram.custom"/>
+		<item value="false" key="platform:/plugin/org.eclipse.papyrus.customization.paletteconfiguration/facet/PaletteConfiguration.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.customization.properties/UICustom/PropertiesContext.custom"/>
+		<item value="true" key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/SimpleUML.custom"/>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Behavior:method">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:UseCase:useCase">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Event:event">
 	</section>
 	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:InstanceSpecification:instance">
 		<section name="History">
@@ -51,15 +88,5 @@
 				<item value="platform:/resource/Pogotowie/model.uml#_eIMVgNlwEeaCNrxuN5l9vg"/>
 			</list>
 		</section>
-	</section>
-	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Type:type">
-		<section name="History">
-			<list key="PreviousSelection">
-				<item value="platform:/resource/Pogotowie/model.uml#_kJWR4NMpEealV5J5YAKhPg"/>
-				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-			</list>
-		</section>
-	</section>
-	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Pogotowie/model.uml:uml:Property:subsettedProperty">
 	</section>
 </section>
