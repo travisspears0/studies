@@ -55,8 +55,8 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_Qth1ntMtEeaRWsto0kPFwQ" containerData="8000" selectedElement="_Qth1n9MtEeaRWsto0kPFwQ">
-              <children xsi:type="advanced:Placeholder" xmi:id="_Qth1n9MtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.editorss" containerData="6520" ref="_QtjD1tMtEeaRWsto0kPFwQ"/>
-              <children xsi:type="basic:PartStack" xmi:id="_Qth1oNMtEeaRWsto0kPFwQ" elementId="org.eclipse.papyrus.perspective.folder.bottom" containerData="3480" selectedElement="_Qth1odMtEeaRWsto0kPFwQ">
+              <children xsi:type="advanced:Placeholder" xmi:id="_Qth1n9MtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.editorss" containerData="5638" ref="_QtjD1tMtEeaRWsto0kPFwQ"/>
+              <children xsi:type="basic:PartStack" xmi:id="_Qth1oNMtEeaRWsto0kPFwQ" elementId="org.eclipse.papyrus.perspective.folder.bottom" containerData="4362" selectedElement="_Qth1odMtEeaRWsto0kPFwQ">
                 <children xsi:type="advanced:Placeholder" xmi:id="_Qth1odMtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_QtjENdMtEeaRWsto0kPFwQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_Qth1otMtEeaRWsto0kPFwQ" elementId="org.eclipse.papyrus.views.validation.ModelValidationView" ref="_QtjERdMtEeaRWsto0kPFwQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_Qth1o9MtEeaRWsto0kPFwQ" elementId="org.eclipse.papyrus.views.references.ReferencesView" ref="_QtjES9MtEeaRWsto0kPFwQ"/>
@@ -90,7 +90,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_QtjD1tMtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.editorss" selectedElement="_QtjD19MtEeaRWsto0kPFwQ">
-      <children xsi:type="basic:PartStack" xmi:id="_QtjD19MtEeaRWsto0kPFwQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_QtjD2NMtEeaRWsto0kPFwQ">
+      <children xsi:type="basic:PartStack" xmi:id="_QtjD19MtEeaRWsto0kPFwQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_QtjD6dMtEeaRWsto0kPFwQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
@@ -100,8 +100,6 @@
           <tags>Editor</tags>
           <tags>org.eclipse.papyrus.infra.core.papyrusEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_QtjD2dMtEeaRWsto0kPFwQ" elementId="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
             <tags>menuContribution:popup</tags>
             <tags>popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu</tags>
@@ -172,6 +170,8 @@
           <tags>Editor</tags>
           <tags>org.eclipse.papyrus.infra.core.papyrusEditor</tags>
           <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_QtjD6tMtEeaRWsto0kPFwQ" elementId="org.eclipse.papyrus.infra.core.editor.ui.tabmenu">
             <tags>menuContribution:popup</tags>
             <tags>popup:org.eclipse.papyrus.infra.core.editor.ui.tabmenu</tags>
@@ -350,7 +350,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QtjEUdMtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_p-VcMNfzEeaKtr4z29Gq-g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Qtrm2dMtEeaRWsto0kPFwQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_p-lTsNl7Eea_sv1UdmrzAQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Qtrm2dMtEeaRWsto0kPFwQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QtjqyNMtEeaRWsto0kPFwQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -368,7 +368,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QtjrKNMtEeaRWsto0kPFwQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_p-ZGkNfzEeaKtr4z29Gq-g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QtrBGtMtEeaRWsto0kPFwQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_p-3nkNl7Eea_sv1UdmrzAQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QtrBGtMtEeaRWsto0kPFwQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QtjrVdMtEeaRWsto0kPFwQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
