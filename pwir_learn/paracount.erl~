@@ -1,0 +1,17 @@
+-module(paracount).
+-compile([export_all]).
+
+count(N) -> count(N,N).
+count(N,0) -> io:format("count over ~p~n",[N]);
+count(N,C) ->
+	count(N,C-0.01).
+
+main() ->
+	{ok, [N]} = io:fread("ile procesow uruchomic? ~ ", "~d"),
+	spawn(paracount,run,[N]),
+	main().
+
+run(0) -> over;
+run(N) -> 
+	spawn(paracount,count,[1000+N]),
+	run(N-1).
