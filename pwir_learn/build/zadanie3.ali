@@ -4,12 +4,11 @@ P ZX
 
 RN
 RV NO_DELAY
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTIONS
 RV NO_FIXED_POINT
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RV NO_IMPLICIT_DYNAMIC_CODE
+RV NO_RELATIVE_DELAY
 RV NO_SELECT_STATEMENTS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASK_HIERARCHY
@@ -20,8 +19,9 @@ RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U adazad1%b		adazad1.adb		51cbb6bb NE OO SU IL
+U zadanie3%b		zadanie3.adb		766110e4 NE OO SU IL
 W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -34,6 +34,8 @@ W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-calend.ads		20141120112812 d986d312 ada.calendar%s
+D a-caldel.ads		20140120152337 9f20b83d ada.calendar.delays%s
 D a-except.ads		20151016123252 291912d5 ada.exceptions%s
 D a-finali.ads		20151020095656 bf4f806b ada.finalization%s
 D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
@@ -42,7 +44,6 @@ D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
 D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
 D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
 D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
-D adazad1.adb		20170115150140 69a6436f adazad1%b
 D interfac.ads		20151118101227 4be8ce1b interfaces%s
 D i-c.ads		20110801143639 5421119b interfaces.c%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
@@ -73,18 +74,23 @@ D s-tassta.ads		20121029110946 70812003 system.tasking.stages%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D zadanie3.adb		20170116180815 4e0ce530 zadanie3%b
 X 1 ada.ads
-16K9*Ada 19e8 10|1r6 2r5
-X 8 a-textio.ads
-49K13*Text_IO 471e16 10|1w10 2r9
-206U14*Get 10|28s9
-263U14*Put_Line 10|15s41 19s33 27s9
-X 10 adazad1.adb
-4U11*adazad1 4b11 30l5 30t12
-6t14 A 10b19 23t12 29r9
-7Y23 e 14b40 16l37 16t38 29s11
-25e9 c{character} 28m13
-X 27 s-stausa.ads
+16K9*Ada 19e8 42|1r6 2r5
+X 10 a-textio.ads
+49K13*Text_IO 471e16 42|1w10 2r9
+242U14*Put 42|18s33
+263U14*Put_Line 42|23s33 27s17
+X 28 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 42 zadanie3.adb
+4U11*zadanie3 4b11 34l5 34t13
+6I14 world<short_short_integer> 8r30
+8U19 fixworld 8b19 8>28 30t12 33s9
+8i28 w{6I14}
+9e17 c{character}
+10i17 state{integer} 19m33 22m33 29r20
+11t22 t 14b27 25t20 29r35
+12Y31 f 17b40 29s37
 
