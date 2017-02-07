@@ -17,11 +17,11 @@ cross(PID,LEN,NUM,COUNT) ->
 set_primes(PID,L) -> set_primes(PID,L,(length(L) div 2)-1).
 %set_primes(PID,L,0) -> io:format("over setting primes~n",[]),PID!{L};
 set_primes(PID,L,COUNT) ->
+	if
+		
+	end,
 	receive
-		{prime,X} -> %setnth(L,X,0),set_primes(PID,L,COUNT-1);
-		if
-			
-		end,
+		{prime,X} -> setnth(L,X,0),set_primes(PID,L,COUNT-1);
 		{over} -> io:format("over received ~p~n",[COUNT])
 	end.
 
